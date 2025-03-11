@@ -13,9 +13,9 @@
     100% {
         top: 960px;
         left: 50px;
-        transform: translateX(0); 
-        position: relative;  
-        position: fixed;     
+        transform: translateX(0);
+        position: relative;
+        position: fixed;
     }
 }
 
@@ -43,7 +43,15 @@
     animation: moveToTopCenter 0.5s forwards;
 }
 
-.content-limit{
+.content-limit {
     width: 1450px;
     height: 100%;
+}
+
+.font-quicksand {
+    font-family: Quicksand;
+}
+
+.font-eczar {
+    font-family: Eczar;
 }

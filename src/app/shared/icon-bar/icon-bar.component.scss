@@ -1,0 +1,17 @@
+@import './../../styles/mixins';
+@import './../../styles/variables';
+
+
+.icon-bar-content {
+    @include flex($justify: space-around, $align: center);
+    height: 32px;
+    width: 120px;
+
+    a {
+        img {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
