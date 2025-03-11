@@ -11,6 +11,9 @@
 
 .lading-page-content {
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .icon-bar {
@@ -19,6 +22,34 @@
     top: 28px;
     left: 72px;
 }
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    height: 740px;
+    overflow: hidden;
+
+    .circle {
+        position: absolute;
+        right: 0;
+        width: 350px;
+    }
+
+    .avatar {
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        object-fit: cover;
+        
+    }
+
+}
+
+
 
 .test {
     width: 50px;
