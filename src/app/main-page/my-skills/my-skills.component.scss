@@ -1,0 +1,9 @@
+@import './../../styles/mixins';
+@import './../../styles/variables';
+
+.my-skills-container {
+    @include flex($justify: center, $align: normal);
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+}

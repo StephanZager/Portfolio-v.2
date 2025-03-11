@@ -1,0 +1,22 @@
+.main-page-container::-webkit-scrollbar {
+    display: none;
+}
+
+.main-page-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+    @media(max-height: 800px) {
+        scroll-snap-type: none;
+    }
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    
+}

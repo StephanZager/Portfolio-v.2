@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+
+}
+
+@keyframes moveToBottomLeft {
+    0% {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        top: 960px;
+        left: 50px;
+        transform: translateX(0); 
+        position: relative;  
+        position: fixed;     
+    }
+}
+
+.move-bottom-left {
+    animation: moveToBottomLeft 0.5s forwards;
+}
+
+@keyframes moveToTopCenter {
+    0% {
+        top: 960px;
+        left: 50px;
+        transform: translateX(0);
+
+    }
+
+    100% {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+    }
+}
+
+.move-top-center {
+    animation: moveToTopCenter 0.5s forwards;
+}
+
+.content-limit{
+    width: 1450px;
+    height: 100%;
+}
