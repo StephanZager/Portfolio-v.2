@@ -43,6 +43,21 @@
     animation: moveToTopCenter 0.5s forwards;
 }
 
+@keyframes rotating {
+	0% {	rotate: 0; 	}
+	100% {	rotate: 1turn; 	}
+}
+
+@keyframes scratch {
+	0% {	rotate: 0;	}
+	10% {	rotate: -0.25turn;}
+	100% {	rotate: 1turn;	}
+}
+
+.rotating {
+	animation: rotating 20s linear infinite;
+}
+
 .content-limit {
     width: 1450px;
     height: 100%;

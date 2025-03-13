@@ -1,0 +1,16 @@
+@import './../../../styles/mixins';
+@import './../../../styles/variables';
+
+.scroll-down-advertisement {
+    width: 144px;
+    height: 144px;
+    position: relative;
+
+    .arrow-bottom {
+        width: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
