@@ -37,6 +37,10 @@
     width: 440px;
     align-self: start;
     margin-top: 160px;
+
+    button{
+        margin-top: 32px;
+    }
 }
 
 .img-section{
@@ -55,7 +59,7 @@
     }
 
     .avatar {
-        height: 100%;
+        height: 112%;
         width: 100%;
         z-index: 2;
         position: absolute;
