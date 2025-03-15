@@ -1,0 +1,29 @@
+@import './../../../styles/mixins';
+@import './../../../styles/variables';
+
+.continual-learning-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+
+    .icon {
+        cursor: pointer;
+        width: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &:hover~.circle {
+            animation-play-state: paused;
+        }
+    }
+
+    .circle {
+        cursor: pointer;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+}
