@@ -1,1 +1,9 @@
-<p>skills works!</p>
+<div class="my-skills-container">
+    <div class="my-skill-container" *ngFor="let skill of mySkillSet">
+
+        <img src="{{skill.img}}" alt="">
+        <p style="color: white;">{{skill.name}}</p>
+
+
+    </div>
+</div>
