@@ -10,17 +10,28 @@
 
 .my-skills-content{
 
+
+    @include flex($justify: space-between, $align: normal, $direction: column);
+
     h2{
         color: $white;
     }
 }
 
 .skills-description{
+    margin-top: 40px;
     background-color: $blue;
     color: $white;
     padding: 32px;
     max-width: 600px;
     width: 100%;
     height: auto;
+}
+
+.subcomponent{
+    @include flex($justify: space-between, $align: flex-end);
+    align-self: flex-end;
+    width: 100%;
+    margin-bottom: 115px;
     
 }
