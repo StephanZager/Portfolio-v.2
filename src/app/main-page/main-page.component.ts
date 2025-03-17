@@ -2,11 +2,12 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { LadingPageComponent } from "./lading-page/lading-page.component";
 import { AboutMeComponent } from "./about-me/about-me.component";
 import { MySkillsComponent } from "./my-skills/my-skills.component";
+import { MyWorkComponent } from "./my-work/my-work.component";
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [LadingPageComponent, AboutMeComponent, MySkillsComponent],
+  imports: [LadingPageComponent, AboutMeComponent, MySkillsComponent, MyWorkComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
