@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-
+  test2:boolean = false;
   curentProject = 0;
 
   projects = [
@@ -20,7 +20,9 @@ export class ProjectsComponent {
       description: 'Hallo das da bubble und bla bla Hallo das da bubble und bla bla Hallo das da bubble und bla bla ',
       img: {
         picture: './../../../../assets/img/projects/da-bubble.svg',
-        bg: '$white'
+        bg: '$white',
+        icon:'./../../../../assets/img/icons/capa.svg',
+
       },
       linkGithub: 'https://github.com/StephanZager/join.git',
       linkLive: 'https://www.join.stephan-zager.de//',
@@ -31,7 +33,8 @@ export class ProjectsComponent {
       description: 'Task-Manager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
       img: {
         picture: './../../../../assets/img/projects/join.svg',
-        bg: '$white'
+        bg: '$white',
+        icon:'./../../../../assets/img/icons/join-check.svg',
       },
       linkGithub: 'https://github.com/StephanZager/join.git',
       linkLive: 'https://www.join.stephan-zager.de//',
@@ -42,7 +45,8 @@ export class ProjectsComponent {
       description: 'Ein einfaches Jump-and-Run-Spiel basierend auf objektorientiertem Programmieren. Hilf Pedro, Münzen und Giftflaschen zu finden, um gegen das Killerhuhn zu kämpfen.',
       img: {
         picture: './../../../../assets/img/projects/Pollo.svg',
-        bg: '$white'
+        bg: '$white',
+        icon:'./../../../../assets/img/icons/loco-chicken.svg',
       },
       linkGithub: 'https://github.com/StephanZager/join.git',
       linkLive: 'https://www.join.stephan-zager.de//',
@@ -54,11 +58,21 @@ export class ProjectsComponent {
     if (this.curentProject >= Object.keys(this.projects).length) {
       this.curentProject = 0;
     }
+  }
 
-    console.log(this.curentProject)
+  previous() {
+    this.curentProject--;
+    if (this.curentProject < 0) {
+      this.curentProject = this.projects.length - 1;
+    }
   }
 
   getTechnologies(index: number): string {
     return this.projects[index].technology.replace(/,/g, ' | ');
+  }
+
+  test(){
+    this.test2 = true
+    console.log('Hallo',this.test2)
   }
 }
