@@ -1,0 +1,28 @@
+<div class="project-container">
+    <div class="img-container">
+        <img [src]="projects[curentProject].img.picture" alt="">
+    </div>
+
+    <div class="project-info">
+        <h6>{{projects[curentProject].name}}</h6>
+        <p>{{getTechnologies(curentProject)}}</p>
+        <span>{{projects[curentProject].description}}</span>
+
+        <div class="project-buttons">
+            <button>
+                <img src="./../../../../assets/img/icons/arrow-right.svg" alt="">
+                GitHub</button>
+            <button>
+                <img src="./../../../../assets/img/icons/arrow-right.svg" alt="">
+                Live Test</button>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+<button (click)="next()">nächste</button>

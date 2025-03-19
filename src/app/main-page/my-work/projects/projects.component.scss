@@ -1,0 +1,59 @@
+@import './../../../styles/mixins';
+@import './../../../styles/variables';
+
+.project-container{
+    @include flex($justify:space-between);
+
+    h6{
+        color: $white;
+    }
+
+    span{
+        color: $white;
+    }
+
+    p{
+        color: $blue;
+        font-weight: 700;
+    }
+}
+
+.img-container{
+    @include flex($justify: center, $align: center);
+    width: 488px;
+    height: 488px;
+    background-color: $blue;
+    border-radius: 4px;
+
+    img{
+        width: 413px;
+        height: 294px;
+    }
+}
+
+.project-info{
+    @include flex($justify: center, $align: start, $direction: column);
+    gap: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: $black;
+    width: 688px;
+    height: 370px;
+
+    .project-buttons{        
+        @include flex();
+        margin-top: 16px;
+        gap: 32px;
+
+        button{  
+            @include flex($direction:row-reverse);
+            gap: 4px;                 
+            //background-image: url('./../../../../assets/img/icons/arrow-right.svg');
+            //background-repeat: no-repeat;
+           // background-position: calc(100% - 4px) center;   
+            //display: inline-flex;
+            //align-items: center;         
+        }
+    }
+
+}

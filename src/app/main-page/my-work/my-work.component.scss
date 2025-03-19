@@ -5,5 +5,19 @@
     @include flex($justify: center, $align: normal);
     width: 100%;
     height: 100%;
-    background-color: $blue;
+    background-color: $white;
+}
+
+.headline-section{
+    @include flex($justify: normal, $align: center);
+    gap: 72px;
+
+    span{
+        margin-top: 160px;
+        width: 500px;
+    }
+}
+
+.projects-componente{
+    margin-top: 40px;
 }
