@@ -1,0 +1,33 @@
+@import './../../styles/mixins';
+@import './../../styles/variables';
+
+.contact-container {
+    @include flex($justify: center, $align: normal);
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+}
+
+.contact-content {}
+
+.left-section{
+    height: 100%;
+    @include flex($justify: space-between, $align: normal , $direction: column);
+}
+
+.headline-section {
+    width: 528px;
+
+    h2 {
+        color: $yellow;
+    }
+
+    h6 {
+        margin-top: 64px;
+        margin-bottom: 16px;
+        color: $orange;
+    }
+    span{        
+        color: $white;
+    }
+}
