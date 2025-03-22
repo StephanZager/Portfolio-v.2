@@ -9,7 +9,7 @@
 }
 
 .contact-content {
-    @include flex();
+    @include flex($justify: space-between);
 }
 
 .left-section{
@@ -33,3 +33,4 @@
         color: $white;
     }
 }
+

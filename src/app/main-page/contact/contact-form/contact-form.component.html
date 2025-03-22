@@ -1,18 +1,28 @@
 <form (submit)="onSubmit($event)">
-    <div>
-        <label for="name">Wie ist dein Name?</label>
-        <input type="text" id="name" name="name" placeholder="Dein Name hier">
+
+    <div class="name-email-container">
+        <div class="input-height">
+            <label for="name">Wie ist dein Name?</label>
+            <input type="text" id="name" name="name" placeholder="Dein Name hier">
+        </div>
+        <div class="input-height">
+            <label for="email">Wie ist dein Email?</label>
+            <input type="text" id="email" name="email" placeholder="youremail@email.com">
+        </div>
     </div>
-    <div>
-        <label for="email">Wie ist dein Email?</label>
-        <input type="text" id="email" name="email" placeholder="youremail@email.com">
-    </div>
-    <div>
-        <label for="text">Wie kann ich sie helfen?</label>        
+    <div class="input-height">
+        <label for="text">Wie kann ich sie helfen?</label>
         <textarea placeholder="Hallo Stephan, ich habe interesse..." name="message" id="message"></textarea>
     </div>
 
-    <button [disabled]=""> schicken</button>
+    <div class="input-checkbox-container">
+        <input type="checkbox">
+        <p>Ich habe das <a href="#">Imrpind</a> gelsen dasd dasdsa</p>
+    </div>
+
+    <div class="button-container">
+        <button (click)="test()" [disabled]="isSubmitting"> schicken</button>
+    </div>
 
 
 </form>
