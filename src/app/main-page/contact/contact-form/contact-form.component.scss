@@ -17,38 +17,46 @@ form {
         resize: none;
     }
 
-    p{
+    p {
         color: $white;
     }
 }
 
-.name-email-container{
+.name-email-container {
     @include flex($justify: space-between, $align: normal, $direction: normal);
 }
 
-.input-checkbox-container{
-    @include flex($justify: normal, $align: center, $direction: normal); 
+.input-checkbox-container {
+    @include flex($justify: normal, $align: center, $direction: normal);
     gap: 4px;
 
-    a{
+    a {
         color: $orange;
         text-decoration: none;
     }
 }
 
-.button-container{
-    @include flex($justify: center, $align: normal, $direction: normal); 
+.button-container {
+    @include flex($justify: center, $align: normal, $direction: normal);
 }
 
 button:disabled {
-    background-color: transparent; 
-    cursor: not-allowed; 
+    background-color: transparent;
+    cursor: not-allowed;
     opacity: 0.6;
-} 
+}
 
-.input-height{
+.input-height {
     @include flex($justify: space-between, $align: normal, $direction: column);
     height: 90px;
     border-bottom: 1px solid $yellow;
     padding: 16px;
+}
+
+.placeholder-error::placeholder {
+    color: #EC7B7BCC;
+}
+
+.border-error {
+    border-bottom: 1px solid #EC7B7BCC;
 }

@@ -1,18 +1,19 @@
 <form (submit)="onSubmit($event)">
 
     <div class="name-email-container">
-        <div class="input-height">
+        <div class="input-height" [ngClass]="{'border-error': nameError}">
             <label for="name">Wie ist dein Name?</label>
-            <input type="text" id="name" name="name" placeholder="Dein Name hier">
+            <input required type="text" id="name" name="name" placeholder="{{ namePlaceholder }}"
+                (blur)="onBlurName($event)">
         </div>
-        <div class="input-height">
+        <div class="input-height" [ngClass]="{'border-error': emailError}">
             <label for="email">Wie ist dein Email?</label>
-            <input type="text" id="email" name="email" placeholder="youremail@email.com">
+            <input required type="text" id="email" name="email" placeholder="{{ emailPlaceholder }}" (blur)="onBlurEmail($event)">
         </div>
     </div>
-    <div class="input-height">
+    <div class="input-height" [ngClass]="{'border-error': messageError}">
         <label for="text">Wie kann ich sie helfen?</label>
-        <textarea placeholder="Hallo Stephan, ich habe interesse..." name="message" id="message"></textarea>
+        <textarea required placeholder="{{ messagePlaceholder }}" name="message" id="message" (blur)="onBlurMessage($event)"></textarea>
     </div>
 
     <div class="input-checkbox-container">
