@@ -25,15 +25,21 @@ export class ContactFormComponent {
   emailPlaceholder: string = 'youremail@email.com';
   messagePlaceholder: string = 'Hallo Stephan, ich habe Interesse...';
 
+  nameFocus: boolean = false;
+  emailFocus: boolean = false;
+  messageFocus: boolean = false;
+
   onBlurName(event: FocusEvent) {
     const input = event.target as HTMLInputElement;
     if (!input.value) {
       this.namePlaceholder = 'Bitte geben Sie Ihren Namen ein';
       input.classList.add('placeholder-error');
       this.nameError = true;
+      this.nameFocus = true;
     } else {
       input.classList.remove('placeholder-error');
       this.nameError = false;
+      this.nameFocus = false;
     }
   }
 
@@ -64,6 +70,10 @@ export class ContactFormComponent {
   onSubmit(event: Event) {
     event.preventDefault();
     this.isSubmitting = true;
+  }
+
+  focusName(event: FocusEvent) {
+    this.nameFocus = true;
   }
 
   test() {
