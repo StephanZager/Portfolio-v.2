@@ -29,17 +29,20 @@ export class ContactFormComponent {
   emailFocus: boolean = false;
   messageFocus: boolean = false;
 
+  nameFocusLabel: boolean = false;
+  emailFocusLabel: boolean = false;
+  messageFocusLabel: boolean = false;
+
   onBlurName(event: FocusEvent) {
     const input = event.target as HTMLInputElement;
     if (!input.value) {
       this.namePlaceholder = 'Bitte geben Sie Ihren Namen ein';
       input.classList.add('placeholder-error');
       this.nameError = true;
-      this.nameFocus = true;
+      this.nameFocusLabel = false;
     } else {
       input.classList.remove('placeholder-error');
       this.nameError = false;
-      this.nameFocus = false;
     }
   }
 
@@ -49,6 +52,7 @@ export class ContactFormComponent {
       this.emailPlaceholder = 'Bitte geben Sie Ihre Email ein';
       input.classList.add('placeholder-error');
       this.emailError = true;
+      this.emailFocusLabel = false;
     } else {
       input.classList.remove('placeholder-error');
       this.emailError = false;
@@ -61,6 +65,7 @@ export class ContactFormComponent {
       this.messagePlaceholder = 'Bitte geben Sie Ihre Nachricht ein';
       input.classList.add('placeholder-error');
       this.messageError = true;
+      this.messageFocusLabel = false;
     } else {
       input.classList.remove('placeholder-error');
       this.messageError = false;
@@ -74,6 +79,17 @@ export class ContactFormComponent {
 
   focusName(event: FocusEvent) {
     this.nameFocus = true;
+    this.nameFocusLabel = true;
+  }
+
+  focusEmail(event: FocusEvent) {
+    this.emailFocus = true;
+    this.emailFocusLabel = true;
+  }
+
+  focusMessage(event: FocusEvent) {
+    this.messageFocus = true;
+    this.messageFocusLabel = true;
   }
 
   test() {
