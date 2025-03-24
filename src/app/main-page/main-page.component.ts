@@ -4,11 +4,12 @@ import { AboutMeComponent } from "./about-me/about-me.component";
 import { MySkillsComponent } from "./my-skills/my-skills.component";
 import { MyWorkComponent } from "./my-work/my-work.component";
 import { ContactComponent } from "./contact/contact.component";
+import { ReferenzenComponent } from "./referenzen/referenzen.component";
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [LadingPageComponent, AboutMeComponent, MySkillsComponent, MyWorkComponent, ContactComponent],
+  imports: [LadingPageComponent, AboutMeComponent, MySkillsComponent, MyWorkComponent, ContactComponent, ReferenzenComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })

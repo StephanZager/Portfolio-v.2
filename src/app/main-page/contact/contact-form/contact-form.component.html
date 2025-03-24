@@ -9,7 +9,8 @@
         <div class="input-height" [ngClass]="{'focus': emailFocus}">
             <label for="email" [ngClass]="{'focus-label': emailFocusLabel}">Wie ist dein Email?</label>
             <input pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required type="text" id="email"
-                name="email" placeholder="{{ emailPlaceholder }}" (blur)="onBlurEmail($event)" (focus)="focusEmail($event)">
+                name="email" placeholder="{{ emailPlaceholder }}" (blur)="onBlurEmail($event)"
+                (focus)="focusEmail($event)">
         </div>
     </div>
     <div class="input-height" [ngClass]="{'focus': messageFocus}">
