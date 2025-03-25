@@ -1,0 +1,36 @@
+@import './../../../styles/mixins';
+@import './../../../styles/variables';
+
+.referenz-content {
+    @include flex($justify: normal, $align: flex-end, $direction: column);
+    width: 100%;
+    max-width: 384px;
+
+    h6 {
+        color: $white;
+    }
+
+    span {
+        color: $white;
+    }
+
+    p {
+        color: $white;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    a {
+        margin-top: 32px;
+        text-decoration: none;
+    }
+
+}
+
+.referenz-user {
+    @include flex($justify: normal, $align: normal, $direction: column);
+    gap: 10px;
+    width: 100%;
+    padding: 32px;
+    border: 1px solid $white;
+}
