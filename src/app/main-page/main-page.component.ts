@@ -5,11 +5,12 @@ import { MySkillsComponent } from "./my-skills/my-skills.component";
 import { MyWorkComponent } from "./my-work/my-work.component";
 import { ContactComponent } from "./contact/contact.component";
 import { ReferenzenComponent } from "./referenzen/referenzen.component";
+import { NavigationBarComponent } from "../shared/navigation-bar/navigation-bar.component";
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [LadingPageComponent, AboutMeComponent, MySkillsComponent, MyWorkComponent, ContactComponent, ReferenzenComponent],
+  imports: [LadingPageComponent, AboutMeComponent, MySkillsComponent, MyWorkComponent, ContactComponent, ReferenzenComponent, NavigationBarComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })

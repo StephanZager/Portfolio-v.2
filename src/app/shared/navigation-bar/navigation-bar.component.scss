@@ -1,0 +1,18 @@
+@import './../../styles/mixins';
+@import './../../styles/variables';
+
+:host {
+    @include flex($justify: center, $align: normal);
+}
+
+.header-container {
+    position: fixed;
+    z-index: 999;
+    height: 88px;
+    top: 50%;
+}
+
+.header-content{
+    display: flex;
+    justify-content: flex-end;
+}
