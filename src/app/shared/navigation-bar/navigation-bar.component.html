@@ -1,7 +1,7 @@
 <div class="navigation-container">
     <div class="navigation-content">
         <div *ngFor="let item of scrollLink" class="navigation">
-            <a [href]="'#' + item.id"></a>
+            <a (click)="scrollToSection(item.id)" [ngClass]="{'active': activeRoute === item.id}"></a>
         </div>
     </div>
 </div>
