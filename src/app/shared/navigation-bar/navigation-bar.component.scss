@@ -5,14 +5,40 @@
     @include flex($justify: center, $align: normal);
 }
 
-.header-container {
+.navigation-container {
+    width: 100%;
+    max-width: 1450px;
     position: fixed;
     z-index: 999;
-    height: 88px;
+    height: auto;
     top: 50%;
 }
 
-.header-content{
-    display: flex;
-    justify-content: flex-end;
+.navigation-content {
+    @include flex($justify: normal, $align: flex-end, $direction: column);
+    margin-right: 72px;
+
+    a{
+        width: 100%;
+        height: 100%;
+    }
 }
+
+.navigation{
+    @include flex($justify: center, $align: normal, $direction: column);
+    gap: 20px;   
+    width: 8px;
+    height: 8px;
+    margin-bottom: 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: $white;
+}
+
+.navigation-color-bright{
+    background-color: $black;
+}
+
+//.navigation-color-dark{
+//    background-color: $white;
+//}

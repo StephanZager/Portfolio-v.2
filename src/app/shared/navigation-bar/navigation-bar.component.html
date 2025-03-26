@@ -1,5 +1,7 @@
-<div class="header-container content-limit">
-    <div class="header-content">
-     aoisdoaihsdohasddasdsa
+<div class="navigation-container">
+    <div class="navigation-content">
+        <div *ngFor="let item of scrollLink" class="navigation">
+            <a [href]="'#' + item.id"></a>
+        </div>
     </div>
 </div>
