@@ -24,22 +24,34 @@ export class NavigationBarComponent {
   activeRoute: string = '';
 
   ngOnInit() {
-    
+
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        
+
         this.activeRoute = event.urlAfterRedirects.split('/')[1];
       }
     });
   }
-
   scrollToSection(sectionId: string) {
-    // Verhindere das Neuladen der Seite
-    this.router.navigate([], { fragment: sectionId }).then(() => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      console.log('Scrolling to:', sectionId, element);
+
+      const container = document.querySelector('.main-page-container') as HTMLElement;
+      if (container) {
+        container.style.scrollSnapType = 'none';
       }
-    });
+
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      setTimeout(() => {
+        if (container) {
+          container.style.scrollSnapType = 'y mandatory';
+        }
+      }, 1000);
+    } else {
+      console.error('Element not found:', sectionId);
+    }
   }
+
 }

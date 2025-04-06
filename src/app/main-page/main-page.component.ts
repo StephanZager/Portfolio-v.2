@@ -15,32 +15,40 @@ import { NavigationBarComponent } from "../shared/navigation-bar/navigation-bar.
   styleUrl: './main-page.component.scss'
 })
 export class MainPageComponent implements AfterViewInit {
-
   @ViewChild('mainPageContainer', { static: false }) mainPageContainer!: ElementRef;
-  private lastScrollTop = 0;
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     if (this.mainPageContainer) {
-      this.mainPageContainer.nativeElement.addEventListener('scroll', this.onScroll.bind(this));
+      console.log('MainPageContainer initialized:', this.mainPageContainer);
+      // Hier kannst du weitere Logik hinzufügen, z. B. Scroll-Events überwachen
     }
   }
 
-  onScroll() {
-    const testElement = document.querySelector('.test') as HTMLElement;
-    console.log('Scroll event detected');
+  //@ViewChild('mainPageContainer', { static: false }) mainPageContainer!: ElementRef;
+  //private lastScrollTop = 0;
 
-    if (testElement) {
-      const scrollPosition = this.mainPageContainer.nativeElement.scrollTop;
+  //ngAfterViewInit() {
+  //  if (this.mainPageContainer) {
+  //    this.mainPageContainer.nativeElement.addEventListener('scroll', this.onScroll.bind(this));
+  //  }
+  //}
 
-      if (scrollPosition > this.lastScrollTop) {
-        testElement.classList.add('move-bottom-left');
-        testElement.classList.remove('move-top-center');
-      } else {
-        testElement.classList.add('move-top-center');
-        testElement.classList.remove('move-bottom-left');
-      }
+  //onScroll() {
+   // const testElement = document.querySelector('.test') as HTMLElement;
+    //console.log('Scroll event detected');
 
-      this.lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
-    }
-  }
+    //if (testElement) {
+     // const scrollPosition = this.mainPageContainer.nativeElement.scrollTop;
+
+      //if (scrollPosition > this.lastScrollTop) {
+        //testElement.classList.add('move-bottom-left');
+        //testElement.classList.remove('move-top-center');
+      //} else {
+        //testElement.classList.add('move-top-center');
+        //testElement.classList.remove('move-bottom-left');
+      //}
+
+      //this.lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
+    //}
+  //}
 }
