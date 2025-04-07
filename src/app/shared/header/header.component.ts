@@ -12,6 +12,7 @@ import { ScrollService } from '../../sevice/scroll.service';
 })
 export class HeaderComponent implements OnInit {
   isScrolled = false;
+  currentLanguage = 'de'
 
   constructor(private scrollService: ScrollService) {}
 
@@ -44,5 +45,12 @@ export class HeaderComponent implements OnInit {
         }
       }, 50); // Überprüfe die Scroll-Position alle 50ms
     }
+  }
+
+
+  toggleLanguage() {
+    this.currentLanguage = this.currentLanguage === 'de' ? 'en' : 'de';
+    console.log('Language switched to:', this.currentLanguage);
+    // Hier kannst du zusätzliche Logik hinzufügen, z. B. Sprachressourcen laden
   }
 }

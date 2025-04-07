@@ -7,6 +7,7 @@ import { ContactComponent } from "./contact/contact.component";
 import { ReferenzenComponent } from "./referenzen/referenzen.component";
 import { NavigationBarComponent } from "../shared/navigation-bar/navigation-bar.component";
 import { ScrollService } from '../sevice/scroll.service';
+import { SectionService } from '../sevice/section.service';
 
 @Component({
   selector: 'app-main-page',
@@ -30,7 +31,7 @@ export class MainPageComponent implements AfterViewInit {
 
   onScroll() {
     const scrollPosition = this.mainPageContainer.nativeElement.scrollTop;
-    this.scrollService.setScrolled(scrollPosition > 50); // Sende die Scroll-Informationen
+    this.scrollService.setScrolled(scrollPosition > 50);
     this.lastScrollTop = scrollPosition;
   }
 }

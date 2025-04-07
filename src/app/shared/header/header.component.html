@@ -3,5 +3,9 @@
         <div class="logo" [class.scrolled]="isScrolled">
             Zager
         </div>
+
+        <div>
+            <button class="language-btn" (click)="toggleLanguage()">{{ currentLanguage }}</button>
+        </div>
     </div>
 </div>
