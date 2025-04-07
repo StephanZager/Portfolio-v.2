@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 @import './app/styles/mixins';
 @import './app/styles/variables';
@@ -110,10 +110,10 @@ p {
     font-weight: 400;
 }
 
-a{
+a {
     font-size: 18px;
     font-family: 'Quicksand', sans-serif;
-    font-weight: 700; 
+    font-weight: 700;
     color: $white;
 }
 
@@ -171,7 +171,8 @@ textarea {
     color: $white;
 }
 
-textarea:focus, input:focus{
+textarea:focus,
+input:focus {
     outline: none;
 }
 

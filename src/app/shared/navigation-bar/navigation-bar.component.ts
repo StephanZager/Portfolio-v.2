@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 
 @Component({
@@ -19,6 +19,9 @@ export class NavigationBarComponent {
     { id: 'referenzen' },
     { id: 'contact' }
   ];
+
+  isScrolled = false;
+
   constructor(private router: Router) { }
 
   activeRoute: string = '';
@@ -32,11 +35,18 @@ export class NavigationBarComponent {
       }
     });
   }
+
+
+  activeSection: string = '';
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    console.log('Scroll event detected');
+  }
+
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
-      console.log('Scrolling to:', sectionId, element);
-
       const container = document.querySelector('.main-page-container') as HTMLElement;
       if (container) {
         container.style.scrollSnapType = 'none';
@@ -49,8 +59,6 @@ export class NavigationBarComponent {
           container.style.scrollSnapType = 'y mandatory';
         }
       }, 1000);
-    } else {
-      console.error('Element not found:', sectionId);
     }
   }
 
