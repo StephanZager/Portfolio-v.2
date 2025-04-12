@@ -2,22 +2,24 @@ import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { IconBarComponent } from "../icon-bar/icon-bar.component";
 import { MainPageComponent } from '../../main-page/main-page.component';
 import { ScrollService } from '../../sevice/scroll.service';
+import { CommonModule } from '@angular/common';
+import { HeaderMenuComponent } from "../header-menu/header-menu.component";
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [IconBarComponent, MainPageComponent],
+  imports: [IconBarComponent, MainPageComponent, CommonModule, HeaderMenuComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
-  isScrolled = false;
+  isScrolled: boolean = false;
+  toggleMenu: boolean = false;
   currentLanguage = 'de'
 
-  constructor(private scrollService: ScrollService) {}
+  constructor(private scrollService: ScrollService) { }
 
   ngOnInit() {
-    // Abonniere den ScrollService, um die Scroll-Informationen zu erhalten
     this.scrollService.scroll$.subscribe((scrolled) => {
       this.isScrolled = scrolled;
       console.log('Header received scroll event:', scrolled);
@@ -34,12 +36,12 @@ export class HeaderComponent implements OnInit {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  
+
       // Während des Scrollens nach oben die `isScrolled`-Variable zurücksetzen
       const interval = setInterval(() => {
         const scrollPosition = window.scrollY || document.documentElement.scrollTop;
         this.isScrolled = scrollPosition > 50;
-  
+
         if (scrollPosition === 0) {
           clearInterval(interval); // Stoppe das Intervall, wenn oben angekommen
         }
@@ -52,5 +54,12 @@ export class HeaderComponent implements OnInit {
     this.currentLanguage = this.currentLanguage === 'de' ? 'en' : 'de';
     console.log('Language switched to:', this.currentLanguage);
     // Hier kannst du zusätzliche Logik hinzufügen, z. B. Sprachressourcen laden
+  }
+
+  openMenu(){
+    console.log('hallo')
+    this.toggleMenu = true;
+
+    
   }
 }

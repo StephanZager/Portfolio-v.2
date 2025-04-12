@@ -4,8 +4,23 @@
             Zager
         </div>
 
-        <div>
-            <button class="language-btn" (click)="toggleLanguage()">{{ currentLanguage }}</button>
+        <div class="header-menus">
+            <div>
+                <button class="language-btn" (click)="toggleLanguage()">{{ currentLanguage }}</button>
+            </div>
+
+            <div>
+                <div class="burger-menu" (click)="openMenu()">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                <app-header-menu *ngIf="toggleMenu"></app-header-menu>
+            </div>
+
+
         </div>
+
     </div>
 </div>

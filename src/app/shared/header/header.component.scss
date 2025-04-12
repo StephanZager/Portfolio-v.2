@@ -6,13 +6,21 @@
 }
 
 .header-container {
+    @include flex($justify: center, $align: center, $direction: normal);
     position: fixed;
     z-index: 999;
     height: 88px;
+    max-width: 1450px;
+    width: 100%;
     top: 0px;
 }
 
-.header-content {}
+.header-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    @include flex($justify: center, $align: center, $direction: normal);
+}
 
 .logo {
     color: $black;
@@ -30,3 +38,38 @@
 .logo.scrolled {
     transform: translateX(-400px); 
 }
+
+.header-menus{
+    position: absolute;
+    right: 72px;
+    gap: 16px;
+    @include flex($justify: normal, $align: center, $direction: normal);
+}
+
+.burger-menu{
+    @include flex($justify: space-between, $align: normal, $direction: column);
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.line1{
+   width: 24px;
+   height: 3px;
+   background-color: $white;
+   border-radius: 5px; 
+}
+
+.line2{
+    width: 24px;
+    height: 3px;
+    background-color: $white;
+    border-radius: 5px; 
+ }
+
+ .line3{
+    width: 24px;
+    height: 3px;
+    background-color: $white;
+    border-radius: 5px; 
+ }
