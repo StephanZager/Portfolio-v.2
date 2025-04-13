@@ -15,7 +15,7 @@ import { HeaderMenuComponent } from "../header-menu/header-menu.component";
 export class HeaderComponent implements OnInit {
   isScrolled: boolean = false;
   toggleMenu: boolean = false;
-  currentLanguage = 'de'
+  currentLanguage = 'DE'
 
   constructor(private scrollService: ScrollService) { }
 
@@ -51,7 +51,7 @@ export class HeaderComponent implements OnInit {
 
 
   toggleLanguage() {
-    this.currentLanguage = this.currentLanguage === 'de' ? 'en' : 'de';
+    this.currentLanguage = this.currentLanguage === 'DE' ? 'EN' : 'DE';
     console.log('Language switched to:', this.currentLanguage);
   }
 
