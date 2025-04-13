@@ -14,16 +14,15 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        &:hover~.circle {
+        &:hover~.rotating.circle {
             animation-play-state: paused;
+           
         }
     }
 
-    .circle {
-        cursor: pointer;
-
-        &:hover {
-            animation-play-state: paused;
-        }
+    .pop-up {
+        position: absolute;
+        bottom: 0px;
+        left: 150px;
     }
 }

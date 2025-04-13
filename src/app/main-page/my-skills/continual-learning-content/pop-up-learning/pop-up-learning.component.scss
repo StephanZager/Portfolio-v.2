@@ -1,0 +1,31 @@
+@import './../../../../styles/mixins';
+@import './../../../../styles/variables';
+
+.learning-container {
+    @include flex($justify: space-between, $align: center, $direction: column);
+    padding: 32px;
+    background-color: $yellow;
+    width: 360px;
+    height: 285px;
+    border: 1px solid $white;
+    border-radius: 4px;
+
+    h6 {
+        color: $white;
+        text-align: center;
+    }
+
+    span {
+        color: $white;
+    }
+}
+
+.learning-description {
+    @include flex($justify: center, $align: center, $direction: column);
+
+    .img {
+        gap: 40px;
+        margin-top: 8px;
+        @include flex($justify: normal, $align: normal, $direction: row);
+    }
+}
