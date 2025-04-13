@@ -30,46 +30,59 @@
     height: 24px;
     width: 150px;
     letter-spacing: 2px;
-    position: relative; /* Ermöglicht die Animation */
-    transition: transform 0.4s ease; /* Sanfte Animation */
-    transform: translateX(0); /* Standardposition */
+    position: relative;
+    /* Ermöglicht die Animation */
+    transition: transform 0.4s ease;
+    /* Sanfte Animation */
+    transform: translateX(0);
+    /* Standardposition */
 }
 
 .logo.scrolled {
-    transform: translateX(-400px); 
+    transform: translateX(-400px);
 }
 
-.header-menus{
+.header-menus {
     position: absolute;
     right: 72px;
     gap: 16px;
     @include flex($justify: normal, $align: center, $direction: normal);
 }
 
-.burger-menu{
+.menu-section {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: -16px;
+    right: -50px;
+}
+
+.burger-menu {
     @include flex($justify: space-between, $align: normal, $direction: column);
     width: 24px;
     height: 16px;
     cursor: pointer;
 }
 
-.line1{
-   width: 24px;
-   height: 3px;
-   background-color: $white;
-   border-radius: 5px; 
+.line1 {
+    width: 24px;
+    height: 3px;
+    background-color: $white;
+    border-radius: 5px;
 }
 
-.line2{
+.line2 {
     width: 24px;
     height: 3px;
     background-color: $white;
-    border-radius: 5px; 
- }
+    border-radius: 5px;
+}
 
- .line3{
+.line3 {
     width: 24px;
     height: 3px;
     background-color: $white;
-    border-radius: 5px; 
- }
+    border-radius: 5px;
+}

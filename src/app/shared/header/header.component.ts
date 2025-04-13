@@ -53,13 +53,10 @@ export class HeaderComponent implements OnInit {
   toggleLanguage() {
     this.currentLanguage = this.currentLanguage === 'de' ? 'en' : 'de';
     console.log('Language switched to:', this.currentLanguage);
-    // Hier kannst du zusätzliche Logik hinzufügen, z. B. Sprachressourcen laden
   }
 
-  openMenu(){
+  openMenu() {
     console.log('hallo')
     this.toggleMenu = true;
-
-    
   }
 }

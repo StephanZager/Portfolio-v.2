@@ -1,1 +1,14 @@
-<p>header-menu works!</p>
+<div class="menu-container">
+    <div class="headline-section">
+        <h6>Menü</h6>
+        <img (click)="closeMenu()" src="./../../../assets/img/icons/menu-x.svg" alt="">
+    </div>
+
+    <div class="section-links">
+        <p (click)="scrollToSection('aboutMe')">Über Mich</p>
+        <p (click)="scrollToSection('mySkills')">Skillset</p>
+        <p (click)="scrollToSection('myWork')">Portfolio</p>
+        <p (click)="scrollToSection('referenzen')">References</p>
+        <p (click)="scrollToSection('contact')">Kontakt</p>
+    </div>
+</div>
