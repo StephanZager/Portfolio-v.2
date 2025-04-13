@@ -13,7 +13,14 @@
 
             <div class="button-section">
                 <button>Lass uns reden</button>
-                <img class="up-douwn" src="./../../../assets/img/icons/speak- smiley.svg" alt="">
+
+                <div class="menu-section">
+                    <img (mouseover)="openMenu()" (mouseout)="closeMenu()" class="up-douwn"
+                        src="./../../../assets/img/icons/speak- smiley.svg" alt="">
+
+                    <app-pop-up-menu class="menu" *ngIf="isMenuVisible"></app-pop-up-menu>
+                </div>
+
             </div>
         </div>
 

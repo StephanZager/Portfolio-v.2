@@ -1,0 +1,31 @@
+@import './../../../styles/mixins';
+@import './../../../styles/variables';
+
+.menu-container{
+    @include flex($justify: normal, $align: normal, $direction: column);
+    padding: 32px;
+    width: 272px;
+    height: 263px;
+    background-color: $blue;
+    border: 1px solid $black;
+    border-radius: 4px;
+
+    h6{
+        text-align: center;
+        color: $white;
+    }
+}
+
+.list{
+    @include flex($justify: space-between, $align: normal, $direction: column);
+    margin-top: 16px;
+    flex: 1;
+    p{
+        color: $white;
+        font-size: 16px;
+    }
+    div{
+        @include flex($justify: normal, $align: normal);
+        gap: 8px;
+    }
+}

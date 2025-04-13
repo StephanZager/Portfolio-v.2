@@ -46,6 +46,7 @@
     }
 
     .button-section {
+        position: relative;
         width: 100%;
         @include flex($justify: space-between, $align: center, $direction: row);
 
@@ -57,4 +58,14 @@
             }
         }
     }
+}
+
+.menu-ection{
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    right: -178px;
+    top: 48px;
 }
