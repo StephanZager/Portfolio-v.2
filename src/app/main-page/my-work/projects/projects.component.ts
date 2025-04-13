@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MyWorkOnItPopUpComponent } from "./my-work-on-it-pop-up/my-work-on-it-pop-up.component";
 
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MyWorkOnItPopUpComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  test2:boolean = false;
+  isPopUpVisible: boolean = false;
   curentProject = 0;
 
   projects = [
@@ -21,7 +22,7 @@ export class ProjectsComponent {
       img: {
         picture: './../../../../assets/img/projects/da-bubble.svg',
         bg: '$white',
-        icon:'./../../../../assets/img/icons/capa.svg',
+        icon: './../../../../assets/img/icons/capa.svg',
 
       },
       linkGithub: 'https://github.com/StephanZager/join.git',
@@ -34,7 +35,7 @@ export class ProjectsComponent {
       img: {
         picture: './../../../../assets/img/projects/join.svg',
         bg: '$white',
-        icon:'./../../../../assets/img/icons/join-check.svg',
+        icon: './../../../../assets/img/icons/join-check.svg',
       },
       linkGithub: 'https://github.com/StephanZager/join.git',
       linkLive: 'https://www.join.stephan-zager.de//',
@@ -46,7 +47,7 @@ export class ProjectsComponent {
       img: {
         picture: './../../../../assets/img/projects/Pollo.svg',
         bg: '$white',
-        icon:'./../../../../assets/img/icons/loco-chicken.svg',
+        icon: './../../../../assets/img/icons/loco-chicken.svg',
       },
       linkGithub: 'https://github.com/StephanZager/join.git',
       linkLive: 'https://www.join.stephan-zager.de//',
@@ -71,8 +72,12 @@ export class ProjectsComponent {
     return this.projects[index].technology.replace(/,/g, ' | ');
   }
 
-  test(){
-    this.test2 = true
-    console.log('Hallo',this.test2)
+  openPopUp() {
+    this.isPopUpVisible = true;
+
+  }
+
+  closePopUp() {
+    this.isPopUpVisible = false;
   }
 }

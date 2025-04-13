@@ -7,7 +7,8 @@
         <div class="project-info">
             <div class="headline-section">
                 <h6>{{projects[curentProject].name}}</h6>
-                <img (mouseover)="test()" class="up-douwn" [src]="projects[curentProject].img.icon" alt="">
+                <img (mouseout)="closePopUp()" (mouseover)="openPopUp()" class="up-douwn" [src]="projects[curentProject].img.icon" alt="">
+                <app-my-work-on-it-pop-up class="pop-up" *ngIf="isPopUpVisible"></app-my-work-on-it-pop-up>
             </div>
             <p>{{getTechnologies(curentProject)}}</p>
             <span>{{projects[curentProject].description}}</span>

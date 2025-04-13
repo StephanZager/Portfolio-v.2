@@ -1,0 +1,15 @@
+@import './../../../../styles/mixins';
+@import './../../../../styles/variables';
+
+.pop-up-container{
+    width: 520px;
+    height: auto;
+    padding: 32px;
+    background-color: $blue;
+    border: 1px solid $white;
+    border-radius: 4px;
+
+    span{
+        color: white;
+    }
+}
