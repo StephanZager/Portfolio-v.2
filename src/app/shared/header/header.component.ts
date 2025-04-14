@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { IconBarComponent } from "../icon-bar/icon-bar.component";
 import { MainPageComponent } from '../../main-page/main-page.component';
 import { ScrollService } from '../../sevice/scroll.service';
+import { SectionService } from '../../sevice/section.service';
 import { CommonModule } from '@angular/common';
 import { HeaderMenuComponent } from "../header-menu/header-menu.component";
 
@@ -15,14 +16,19 @@ import { HeaderMenuComponent } from "../header-menu/header-menu.component";
 export class HeaderComponent implements OnInit {
   isScrolled: boolean = false;
   toggleMenu: boolean = false;
-  currentLanguage = 'DE'
+  currentLanguage = 'DE';
+  currentSection: string = '';
 
-  constructor(private scrollService: ScrollService) { }
+  constructor(private scrollService: ScrollService,private sectionService: SectionService) { }
 
   ngOnInit() {
     this.scrollService.scroll$.subscribe((scrolled) => {
       this.isScrolled = scrolled;
-      console.log('Header received scroll event:', scrolled);
+
+    });
+    this.sectionService.currentSection$.subscribe((section) => {
+      this.currentSection = section; // Aktualisiere die aktuelle Section
+      console.log('header',this.currentSection)
     });
   }
 

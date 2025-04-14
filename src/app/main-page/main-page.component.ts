@@ -21,7 +21,7 @@ export class MainPageComponent implements AfterViewInit {
   currentSection: string = ''; // Speichert die aktuelle Section
   private lastScrollTop = 0;
 
-  constructor(private scrollService: ScrollService) {}
+  constructor(private scrollService: ScrollService, private sectionService: SectionService) { }
 
   ngAfterViewInit() {
     if (this.mainPageContainer) {
@@ -31,18 +31,16 @@ export class MainPageComponent implements AfterViewInit {
 
   onScroll() {
     const scrollPosition = this.mainPageContainer.nativeElement.scrollTop;
-    this.scrollService.setScrolled(scrollPosition > 50); 
+    this.scrollService.setScrolled(scrollPosition > 50);
 
-   
     const sections = this.mainPageContainer.nativeElement.querySelectorAll('.section');
     sections.forEach((section: HTMLElement) => {
       const rect = section.getBoundingClientRect();
       if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
-        this.currentSection = section.id; 
+        this.sectionService.setCurrentSection(section.id);
       }
     });
 
-    console.log('Aktuelle Section:', this.currentSection); 
     this.lastScrollTop = scrollPosition;
   }
 }

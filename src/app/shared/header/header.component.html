@@ -1,16 +1,25 @@
 <div class="header-container">
     <div class="header-content">
-        <div class="logo" [class.scrolled]="isScrolled">
+        <div [ngClass]="{'about-me-logo': currentSection === 'aboutMe', 
+        'my-work-logo': currentSection === 'myWork'
+         }" class="logo" [class.scrolled]="isScrolled">
             Zager
         </div>
 
         <div class="header-menus">
             <div>
-                <button class="language-btn" (click)="toggleLanguage()">{{ currentLanguage }}</button>
+                <button [ngClass]="{'about-me-btn': currentSection === 'aboutMe', 
+                                    'my-work-btn': currentSection === 'myWork'
+                                     }" class="language-btn" (click)="toggleLanguage()">
+                    {{ currentLanguage }}
+                </button>
             </div>
 
             <div class="menu-section">
-                <div class="burger-menu" (click)="openMenu()" >
+                <div class="burger-menu" (click)="openMenu()" [ngClass]="{
+            'about-me-menu': currentSection === 'aboutMe',
+            'my-work-menu': currentSection === 'myWork'
+        }">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>

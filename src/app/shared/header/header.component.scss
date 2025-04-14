@@ -23,7 +23,7 @@
 }
 
 .logo {
-    color: $black;
+    color: $white;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 24px;
@@ -36,6 +36,14 @@
     /* Sanfte Animation */
     transform: translateX(0);
     /* Standardposition */
+}
+
+.logo.about-me-logo{
+    color: $black;
+}
+
+.logo.my-work-logo{
+    color: $black;
 }
 
 .logo.scrolled {
@@ -87,7 +95,32 @@
     border-radius: 5px;
 }
 
-.language-btn{
+.burger-menu.about-me-menu .line1,
+.burger-menu.about-me-menu .line2,
+.burger-menu.about-me-menu .line3 {
+    background-color: $black;
+
+}
+
+/* Stil für "myWork" */
+.burger-menu.my-work-menu .line1,
+.burger-menu.my-work-menu .line2,
+.burger-menu.my-work-menu .line3 {
+    background-color: $black;
+
+}
+
+.language-btn {
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.language-btn.about-me-btn {
+    border-color: $black;
+    color: $black;
+}
+
+.language-btn.my-work-btn {
+    border-color: $black;
+    color: $black;
 }

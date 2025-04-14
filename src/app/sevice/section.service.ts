@@ -5,10 +5,10 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SectionService {
-  private currentSectionSubject = new BehaviorSubject<string>('');
+  private currentSectionSubject = new BehaviorSubject<string>(''); // Standardwert
   currentSection$ = this.currentSectionSubject.asObservable();
 
   setCurrentSection(sectionId: string) {
-    this.currentSectionSubject.next(sectionId);
+    this.currentSectionSubject.next(sectionId); // Aktualisiere die aktuelle Section
   }
 }
