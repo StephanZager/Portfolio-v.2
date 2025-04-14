@@ -23,6 +23,10 @@ export class MainPageComponent implements AfterViewInit {
 
   constructor(private scrollService: ScrollService, private sectionService: SectionService) { }
 
+  ngOnInit() {
+    this.sectionService.setCurrentSection('ladingPage');
+  }
+
   ngAfterViewInit() {
     if (this.mainPageContainer) {
       this.mainPageContainer.nativeElement.addEventListener('scroll', this.onScroll.bind(this));
