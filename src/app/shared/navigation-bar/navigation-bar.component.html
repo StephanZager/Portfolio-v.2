@@ -1,10 +1,15 @@
 <div class="navigation-container">
-    <div class="navigation-content">
-      <div *ngFor="let item of scrollLink" class="navigation">
-        <a (click)="scrollToSection(item.id)" 
-           [ngClass]="{'active': activeSection === item.id, 'highlight': activeSection === 'aboutMe' || activeSection === 'myWork'}">
-         
-        </a>
-      </div>
+  <div class="navigation-content">
+    <div *ngFor="let item of scrollLink" class="navigation">
+      <a 
+        (click)="scrollToSection(item.id)" 
+        [ngClass]="{
+          'active': currentSection === item.id, 
+          'about-me-highlight': currentSection === 'aboutMe', 
+          'my-work-highlight': currentSection === 'myWork'
+        }">
+        
+      </a>
     </div>
   </div>
+</div>

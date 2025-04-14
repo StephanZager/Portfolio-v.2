@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { SectionService } from '../../sevice/section.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -21,18 +22,23 @@ export class NavigationBarComponent {
   ];
 
   isScrolled = false;
+  currentSection: string = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private sectionService: SectionService) { }
 
   activeRoute: string = '';
 
   ngOnInit() {
-
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
 
         this.activeRoute = event.urlAfterRedirects.split('/')[1];
       }
+    });
+
+    this.sectionService.currentSection$.subscribe((section) => {
+      this.currentSection = section;
+      console.log(this.currentSection)
     });
   }
 

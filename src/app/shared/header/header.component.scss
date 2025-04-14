@@ -38,11 +38,11 @@
     /* Standardposition */
 }
 
-.logo.about-me-logo{
+.logo.about-me-logo {
     color: $black;
 }
 
-.logo.my-work-logo{
+.logo.my-work-logo {
     color: $black;
 }
 
@@ -72,34 +72,30 @@
     width: 24px;
     height: 16px;
     cursor: pointer;
+
+    &:hover .line1,
+    &:hover .line2,
+    &:hover .line3 {
+        background-color: $orange;
+        transition: background-color 0.2s ease;
+
+    }
 }
 
-.line1 {
-    width: 24px;
-    height: 3px;
-    background-color: $white;
-    border-radius: 5px;
-}
-
-.line2 {
-    width: 24px;
-    height: 3px;
-    background-color: $white;
-    border-radius: 5px;
-}
-
+.line1,
+.line2,
 .line3 {
     width: 24px;
     height: 3px;
     background-color: $white;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .burger-menu.about-me-menu .line1,
 .burger-menu.about-me-menu .line2,
 .burger-menu.about-me-menu .line3 {
     background-color: $black;
-
 }
 
 /* Stil für "myWork" */

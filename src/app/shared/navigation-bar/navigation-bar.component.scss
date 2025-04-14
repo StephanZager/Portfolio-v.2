@@ -2,53 +2,55 @@
 @import './../../styles/variables';
 
 :host {
-    @include flex($justify: center, $align: normal);
+  @include flex($justify: center, $align: normal);
 }
 
 .navigation-container {
-    position: fixed;
-    z-index: 999;
-    height: auto;
-    top: 50%;
-    right: 72px;
+  position: fixed;
+  z-index: 999;
+  height: auto;
+  top: 50%;
+  right: 72px;
 }
 
 .navigation-content {
-    @include flex($justify: normal, $align: flex-end, $direction: column);
-
-   // a {
-    //    width: 100%;
-    //    height: 100%;
-   //     background-color: $white;
-   //     border-radius: 100px;
-   //     cursor: pointer;
-   //     transition: background-color 0.3s ease;
-   // }
+  @include flex($justify: normal, $align: flex-end, $direction: column);
 }
 
 .navigation {
-    @include flex($justify: center, $align: normal, $direction: column);
-    gap: 20px;
-    width: 8px;
-    height: 8px;
-    margin-bottom: 20px;
-
-
+  @include flex($justify: center, $align: normal, $direction: column);
+  gap: 20px;
+  width: 8px;
+  height: 8px;
+  margin-bottom: 20px;
 }
 
 .navigation-content a {
-    width: 100%;
-    height: 100%;
-    background-color: $white; /* Standardfarbe */
-    border-radius: 100px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .navigation-content a.active {
-    background-color: $blue; /* Farbe für die aktive Sektion */
-  }
-  
-  .navigation-content a.highlight {
-    background-color: $orange; /* Farbe für "About Me" und "My Work" */
-  }
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.navigation-content a.active {
+  border-radius: 0px;
+  rotate: 45deg;
+  background-color: $orange;
+}
+
+.navigation a.about-me-highlight {
+  background-color: $black;
+}
+
+.navigation a.my-work-highlight {
+  background-color: $black;
+}
+
+.navigation-content a.active.about-me-highlight {
+  background-color: $orange;
+}
+
+.navigation-content a.active.my-work-highlight {
+  background-color: $orange;
+}

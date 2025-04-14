@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   currentLanguage = 'DE';
   currentSection: string = '';
 
-  constructor(private scrollService: ScrollService,private sectionService: SectionService) { }
+  constructor(private scrollService: ScrollService, private sectionService: SectionService) { }
 
   ngOnInit() {
     this.scrollService.scroll$.subscribe((scrolled) => {
@@ -27,15 +27,14 @@ export class HeaderComponent implements OnInit {
 
     });
     this.sectionService.currentSection$.subscribe((section) => {
-      this.currentSection = section; // Aktualisiere die aktuelle Section
-      console.log('header',this.currentSection)
+      this.currentSection = section;
     });
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-    this.isScrolled = scrollPosition > 50; // Aktualisiere die Position dynamisch
+    this.isScrolled = scrollPosition > 50;
   }
 
   scrollToSection(sectionId: string) {
@@ -43,26 +42,23 @@ export class HeaderComponent implements OnInit {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-      // Während des Scrollens nach oben die `isScrolled`-Variable zurücksetzen
       const interval = setInterval(() => {
         const scrollPosition = window.scrollY || document.documentElement.scrollTop;
         this.isScrolled = scrollPosition > 50;
 
         if (scrollPosition === 0) {
-          clearInterval(interval); // Stoppe das Intervall, wenn oben angekommen
+          clearInterval(interval);
         }
-      }, 50); // Überprüfe die Scroll-Position alle 50ms
+      }, 50);
     }
   }
 
 
   toggleLanguage() {
     this.currentLanguage = this.currentLanguage === 'DE' ? 'EN' : 'DE';
-    console.log('Language switched to:', this.currentLanguage);
   }
 
   openMenu() {
-    console.log('hallo')
     this.toggleMenu = true;
   }
 }
