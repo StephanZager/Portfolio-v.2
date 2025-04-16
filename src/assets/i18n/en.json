@@ -1,5 +1,11 @@
 {
-    "lading-page":{
-        "headline":"Hello I am"
+    "lading-page": {
+        "headline": "Hello i am",
+        "button": "Contact me"
+    },
+    "about-me": {
+        "headline":"About me",
+        "description": "",
+        "button": "Let's talk"
     }
- }
+}

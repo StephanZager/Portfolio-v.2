@@ -1,5 +1,11 @@
  {
     "lading-page":{
-        "headline":"Hallo ich bin"
+        "headline":"Hallo ich bin",
+        "button": "Kontaktieren Sie mich"
+    },
+    "about-me":{
+        "headline":"Über mich",
+        "description":"",
+        "button":"Lass uns reden"
     }
  }
