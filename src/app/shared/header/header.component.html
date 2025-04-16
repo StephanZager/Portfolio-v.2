@@ -11,8 +11,10 @@
                 <button [ngClass]="{'about-me-btn': currentSection === 'aboutMe', 
                                     'my-work-btn': currentSection === 'myWork'
                                      }" class="language-btn" (click)="toggleLanguage()">
-                    {{ currentLanguage }}
+                    {{ currentLanguage === 'de' ? 'DE' : 'EN' }}
                 </button>
+                <div>{{ 'lading-page.headline' | translate }}</div>
+
             </div>
 
             <div class="menu-section">

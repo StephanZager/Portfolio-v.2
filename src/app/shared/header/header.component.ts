@@ -5,21 +5,24 @@ import { ScrollService } from '../../sevice/scroll.service';
 import { SectionService } from '../../sevice/section.service';
 import { CommonModule } from '@angular/common';
 import { HeaderMenuComponent } from "../header-menu/header-menu.component";
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [IconBarComponent, MainPageComponent, CommonModule, HeaderMenuComponent],
+  imports: [IconBarComponent, MainPageComponent, CommonModule, HeaderMenuComponent, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
   isScrolled: boolean = false;
   toggleMenu: boolean = false;
-  currentLanguage = 'DE';
+  currentLanguage = 'de';
   currentSection: string = '';
 
-  constructor(private scrollService: ScrollService, private sectionService: SectionService) { }
+  constructor(private scrollService: ScrollService, private sectionService: SectionService, private translate: TranslateService) {
+    this.translate.setDefaultLang('de');
+  }
 
   ngOnInit() {
     this.scrollService.scroll$.subscribe((scrolled) => {
@@ -55,7 +58,8 @@ export class HeaderComponent implements OnInit {
 
 
   toggleLanguage() {
-    this.currentLanguage = this.currentLanguage === 'DE' ? 'EN' : 'DE';
+    this.currentLanguage = this.currentLanguage === 'de' ? 'en' : 'de';
+    this.translate.use(this.currentLanguage);
   }
 
   openMenu() {
