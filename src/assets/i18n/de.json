@@ -7,5 +7,10 @@
         "headline":"Über mich",
         "description":"",
         "button":"Lass uns reden"
+    },
+    "my-skills":{
+        "description":"Ich habe in meinen Projekten bereits eine Vielzahl von Frontend-Technologien eingesetzt. Diese Fähigkeiten kamen in unterschiedlichen Bereichen zum Einsatz – etwa beim Erstellen von statischen und dynamischen Websites, bei der Umsetzung responsiver Layouts, in der Entwicklung von benutzerfreundlichen und interaktiven Benutzeroberflächen sowie bei der Darstellung von Daten über ansprechende Visualisierungstools.",
+        "popUp":""
     }
+
  }

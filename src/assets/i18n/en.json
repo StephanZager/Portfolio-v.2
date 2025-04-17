@@ -4,8 +4,12 @@
         "button": "Contact me"
     },
     "about-me": {
-        "headline":"About me",
+        "headline": "About me",
         "description": "",
         "button": "Let's talk"
+    },
+    "my-skills": {
+        "description": "Emphasise that you have used a variety of front-end technologies in your projects. Where have you used these skills: static or dynamic websites, responsive layouts, data visualization interfaces, smooth user experiences?",
+        "popUp": ""
     }
 }
