@@ -37,3 +37,14 @@
     }
 }
 
+.footer{
+    position: absolute;
+    right: 72px;
+    bottom: 56px;
+    width: 50%;
+
+     @media (max-width: $breakpoint-md){
+        width: 60%;
+     }
+}
+

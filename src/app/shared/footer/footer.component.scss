@@ -1,0 +1,26 @@
+@import './../../styles/mixins';
+@import './../../styles/variables';
+
+
+footer{
+    @include flex($justify: space-between, $align: normal);
+    width: 100%;
+    span{
+        color: $white;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+
+        &:hover{
+            color: $orange;
+        }
+    }
+}
+
+.links{
+    @include flex($justify: normal, $align: normal);
+    gap: 32px;
+}
