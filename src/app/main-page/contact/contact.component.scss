@@ -12,16 +12,16 @@
     @include flex($justify: space-between);
 }
 
-.left-section{
+.left-section {
     height: 100%;
-    @include flex($justify: space-between, $align: normal , $direction: column);
-     margin-right: 24px;
+    @include flex($justify: space-between, $align: normal, $direction: column);
+    margin-right: 24px;
 }
 
 .headline-section {
     width: 100%;
     max-width: 528px;
-   
+
 
     h2 {
         color: $yellow;
@@ -32,19 +32,26 @@
         margin-bottom: 16px;
         color: $orange;
     }
-    span{        
+
+    span {
         color: $white;
     }
 }
 
-.footer{
+.arrow-up {
+    right: 72px;
+    top: 160px;
+    position: absolute;
+    
+}
+
+.footer {
     position: absolute;
     right: 72px;
     bottom: 56px;
     width: 50%;
 
-     @media (max-width: $breakpoint-md){
+    @media (max-width: $breakpoint-md) {
         width: 60%;
-     }
+    }
 }
-

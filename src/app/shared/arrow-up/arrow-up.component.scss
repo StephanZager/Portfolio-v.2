@@ -1,0 +1,26 @@
+@import './../../styles/mixins';
+@import './../../styles/variables';
+
+.arrow-up {
+    height: 48px;
+    width: 30px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  animation: jump 1s infinite;
+  -webkit-user-select: none;
+  user-select: none;
+  color: $white; // oder eine andere Farbe
+  text-align: center;
+
+  border-bottom: 2px solid transparent;
+
+    &:hover {
+        border-bottom-color: $orange;
+        color: $orange;
+    }
+}
+
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
