@@ -12,8 +12,11 @@ import { ArrowUpComponent } from "../../shared/arrow-up/arrow-up.component";
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  scrollToLanding() {
-    console.log('d')
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  scrollToSection() {
+    const element = document.getElementById('ladingPage');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+    }
   }
 }
