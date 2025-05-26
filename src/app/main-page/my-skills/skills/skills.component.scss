@@ -2,10 +2,11 @@
 @import './../../../styles/variables';
 
 .my-skills-container{
-    display: flex
-;
+    display: flex;
     flex-wrap: wrap;
-    width: 640px;
+    justify-content: center;
+    max-width: 615px;
+    width: 100%;
 }
 
 .my-skill-container{
@@ -24,5 +25,9 @@
     p{
         margin-top: 12px;
         color: $white;       
+    }
+
+    @media(max-width: $breakpoint-md) {
+        width: 98px;
     }
 }

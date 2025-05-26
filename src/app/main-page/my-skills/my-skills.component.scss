@@ -8,17 +8,21 @@
     background-color: $black;
 }
 
-.my-skills-content{
+.my-skills-content {
 
 
     @include flex($justify: space-between, $align: normal, $direction: column);
 
-    h2{
+    h2 {
         color: $white;
+    }
+
+    @media (min-height: 1000px) {
+        @include flex($justify: space-around, $align: normal, $direction: column);
     }
 }
 
-.skills-description{
+.skills-description {
     margin-top: 40px;
     background-color: $blue;
     color: $white;
@@ -28,10 +32,18 @@
     height: auto;
 }
 
-.subcomponent{
+.subcomponent {
     @include flex($justify: space-between, $align: flex-end);
     align-self: flex-end;
     width: 100%;
     margin-bottom: 115px;
-    
+
+    @media (max-width: $breakpoint-lg) and (max-height: 900px) {
+       margin-bottom: 50px;
+   }
+
+   // @media(max-width: 798px) {
+  //      margin-bottom: 50px;
+  //  }
+
 }
