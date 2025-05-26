@@ -1,13 +1,18 @@
 <div class="project-container">
-    <div class="img-container">
-        <img [src]="projects[curentProject].img.picture" alt="">
+    <div class="img-container" [style.background-color]="projects[curentProject].img.bg">
+        <img class="project-img" [src]="projects[curentProject].img.picture" alt="">
+        <img *ngIf="projects[curentProject].img.bg === '#FF834F'" class="circle rotating"
+            src="./../../../assets/img/circle-blue.svg" alt="">
+        <img *ngIf="projects[curentProject].img.bg !== '#FF834F'" class="circle rotating"
+            src="./../../../assets/img/circle.svg" alt="">
     </div>
 
-    <div>
+    <div class="project-info-section">
         <div class="project-info">
             <div class="headline-section">
                 <h6>{{projects[curentProject].name}}</h6>
-                <img (mouseout)="closePopUp()" (mouseover)="openPopUp()" class="up-douwn" [src]="projects[curentProject].img.icon" alt="">
+                <img (mouseout)="closePopUp()" (mouseover)="openPopUp()" class="up-douwn"
+                    [src]="projects[curentProject].img.icon" alt="">
                 <app-my-work-on-it-pop-up class="pop-up" *ngIf="isPopUpVisible"></app-my-work-on-it-pop-up>
             </div>
             <p>{{getTechnologies(curentProject)}}</p>

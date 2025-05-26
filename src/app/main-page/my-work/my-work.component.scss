@@ -14,8 +14,15 @@
 
     span{
         margin-top: 160px;
-        width: 500px;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
     }
+
+  @media(max-width: $breakpoint-md){
+
+
+  }  
 }
 
 .projects-componente{

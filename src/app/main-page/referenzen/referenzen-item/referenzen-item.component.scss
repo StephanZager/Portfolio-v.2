@@ -33,4 +33,21 @@
     width: 100%;
     padding: 32px;
     border: 1px solid $white;
+    cursor: pointer;
+
+    &:hover{
+        img{
+            display: flex;
+            
+        }
+    }
+}
+
+.name-section{
+     @include flex($justify: space-between, $align: center, $direction: row);
+
+     img{
+        display: none;
+        width: 24px;
+     }
 }

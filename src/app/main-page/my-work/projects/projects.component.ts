@@ -21,7 +21,7 @@ export class ProjectsComponent {
       description: 'Hallo das da bubble und bla bla Hallo das da bubble und bla bla Hallo das da bubble und bla bla ',
       img: {
         picture: './../../../../assets/img/projects/da-bubble.svg',
-        bg: '$white',
+        bg: '#679AAC',
         icon: './../../../../assets/img/icons/capa.svg',
 
       },
@@ -34,7 +34,7 @@ export class ProjectsComponent {
       description: 'Task-Manager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
       img: {
         picture: './../../../../assets/img/projects/join.svg',
-        bg: '$white',
+        bg: '#F9AF42',
         icon: './../../../../assets/img/icons/join-check.svg',
       },
       linkGithub: 'https://github.com/StephanZager/join.git',
@@ -46,7 +46,7 @@ export class ProjectsComponent {
       description: 'Ein einfaches Jump-and-Run-Spiel basierend auf objektorientiertem Programmieren. Hilf Pedro, Münzen und Giftflaschen zu finden, um gegen das Killerhuhn zu kämpfen.',
       img: {
         picture: './../../../../assets/img/projects/Pollo.svg',
-        bg: '$white',
+        bg: '#FF834F',
         icon: './../../../../assets/img/icons/loco-chicken.svg',
       },
       linkGithub: 'https://github.com/StephanZager/join.git',
