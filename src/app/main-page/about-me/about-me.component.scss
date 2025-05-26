@@ -10,42 +10,52 @@
 }
 
 .about-me-content {
-    @include flex($justify: space-between, $align: flex-end, $direction: row-reverse);
+    @include flex($justify: space-between, $align: flex-end, $direction: row);
     position: relative;
 
     h2 {
+        right: 96px;
+        position: absolute;
         align-self: start;
     }
 }
 
 .img-container {
-    width: 528px;
-    height: 740px;
+   height: 76vh;
+   width: 100%;
+   min-width: 504px;
 
     img {
         object-fit: contain;
         width: 100%;
         height: 100%;
+        max-width: 100%;
+        max-height: 100%;
     }
+}
+
+.about-me-section{
+    height: 100%;
+    @include flex($justify: normal, $align: flex-end, $direction: row);
 }
 
 .about-me-descripton {
     @include flex($justify: space-between, $align: flex-start, $direction: column);
-    position: absolute;
-    top: 50%;
-    left: 890px;
-    transform: translate(-50%, -50%);
+    align-self: center;
     padding: 32px;
     background-color: $black;
-    width: 600px;
-    height: 250px;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
     border-radius: 4px;
+    margin-left: -90px;
 
     span {
         color: $white;
     }
 
     .button-section {
+        margin-top: 32px;
         position: relative;
         width: 100%;
         @include flex($justify: space-between, $align: center, $direction: row);
@@ -66,6 +76,10 @@
 
 .menu {
     position: absolute;
-    right: -178px;
+    right: -200px;
     top: 48px;
+
+     @media (max-width: $breakpoint-xl){
+        right: -40px;
+     }
 }

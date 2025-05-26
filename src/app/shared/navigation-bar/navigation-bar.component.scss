@@ -10,14 +10,14 @@
   z-index: 999;
   height: auto;
   top: 50%;
-  right: 72px;
+  right: 60px;
 
   @media (max-width: $breakpoint-lg) {
-    right: 36px;
+    right: 32px;
   }
 
   @media (max-width: $breakpoint-md) {
-    right: 20px;
+    right: 10px;
   }
 
 }

@@ -2,27 +2,32 @@
     <div class="about-me-content content-limit content-padding">
         <h2>{{'about-me.headline' | translate}}</h2>
 
-        <div class="img-container">
-            <img src="./../../../assets/img/stephan/2024-12-07_09-11-31_20.jpg" alt="">
-        </div>
-
-        <div class="about-me-descripton">
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eligendi labore temporibus quas nobis?
-                Libero corrupti officiis facere dolore aperiam quis similique esse. Dolorum, aut minus? Fugit qui
-                dolores quia.</span>
-
-            <div class="button-section">
-                <button>{{'about-me.button' | translate}}</button>
-
-                <div class="menu-section">
-                    <img (mouseover)="openMenu()" (mouseout)="closeMenu()" class="up-douwn"
-                        src="./../../../assets/img/icons/speak- smiley.svg" alt="">
-
-                    <app-pop-up-menu class="menu" *ngIf="isMenuVisible"></app-pop-up-menu>
-                </div>
-
+        <div class="about-me-section">
+            <div class="img-container">
+                <img src="./../../../assets/img/stephan/2024-12-07_09-11-31_20.jpg" alt="">
             </div>
-        </div>
 
+            <div class="about-me-descripton">
+                <span>Hey there, I'm Hanna. Write some information about yourself that is IT related. Why are you
+                    passionate
+                    about coding? What is your source of inspiration for improving your programming skills? Do you learn
+                    from each challenge as you search for the most efficient or elegant solution?<br><br>
+
+                    Let's connect and create something amazing together</span>
+
+                <div class="button-section">
+                    <button>{{'about-me.button' | translate}}</button>
+
+                    <div class="menu-section">
+                        <img (mouseover)="openMenu()" (mouseout)="closeMenu()" class="up-douwn"
+                            src="./../../../assets/img/icons/speak- smiley.svg" alt="">
+
+                        <app-pop-up-menu class="menu" *ngIf="isMenuVisible"></app-pop-up-menu>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
