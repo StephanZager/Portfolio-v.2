@@ -3,8 +3,10 @@
 
 form {
     @include flex($justify: space-between, $align: normal, $direction: column);
-    height: 380px;
-    width: 600px;
+    min-height: 380px;
+    max-width: 600px;
+    width: 100%;
+   
 
     input {
         background: transparent;
@@ -20,10 +22,28 @@ form {
     p {
         color: $white;
     }
+
+    @media (max-width: $breakpoint-md){
+        min-height: 495px;
+    }
 }
 
 .name-email-container {
     @include flex($justify: space-between, $align: normal, $direction: normal);
+
+    @media (max-width: $breakpoint-md) {
+    @include flex($justify: space-between, $align: normal, $direction: column);
+
+  }
+}
+
+.name-container{
+    margin-right: 32px;
+
+     @media (max-width: $breakpoint-md) {
+     margin-right: 0px;
+
+  }
 }
 
 .input-checkbox-container {
@@ -48,7 +68,6 @@ button:disabled {
 
 .input-height {
     @include flex($justify: space-between, $align: normal, $direction: column);
-    height: 90px;
     border-bottom: 1px solid $yellow;
     padding: 16px;
 }

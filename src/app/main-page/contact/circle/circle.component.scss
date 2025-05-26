@@ -10,13 +10,27 @@
         position: absolute;
         object-fit: contain;       
     }
+
+    @media (max-width: $breakpoint-md) {
+    width: 225px;
+
+  }
 }
 
 .circle-orange{
     bottom: 0px;
     width: 180px;
+    @media (max-width: $breakpoint-md) {
+    width: 140px;
+
+  }
 }
 
 .circle-blue{
    right: 0;
+   @media (max-width: $breakpoint-md) {
+    width: 180px;
+    top: 32px;
+
+  }
 }

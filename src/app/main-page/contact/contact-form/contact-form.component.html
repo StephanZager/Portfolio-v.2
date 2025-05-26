@@ -1,32 +1,50 @@
-<form (submit)="onSubmit($event)">
+<form #myForm="ngForm" (submit)="onSubmit($event)">
 
     <div class="name-email-container">
-        <div class="input-height" [ngClass]="{'focus': nameFocus}">
+        <div class="input-height name-container" [ngClass]="{'focus': nameFocus}">
             <label for="name" [ngClass]="{'focus-label': nameFocusLabel}">Wie ist dein Name?</label>
-            <input required type="text" id="name" name="name" placeholder="{{ namePlaceholder }}"
-                (blur)="onBlurName($event)" (focus)="focusName($event)">
+            <input
+                required
+                type="text"
+                id="name"
+                name="name"
+                placeholder="{{ namePlaceholder }}"
+                [(ngModel)]="name"
+                (blur)="onBlurName($event)"
+                (focus)="focusName($event)">
         </div>
         <div class="input-height" [ngClass]="{'focus': emailFocus}">
             <label for="email" [ngClass]="{'focus-label': emailFocusLabel}">Wie ist dein Email?</label>
-            <input pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required type="text" id="email"
-                name="email" placeholder="{{ emailPlaceholder }}" (blur)="onBlurEmail($event)"
+            <input
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                required
+                type="email"
+                id="email"
+                name="email"
+                placeholder="{{ emailPlaceholder }}"
+                [(ngModel)]="email"
+                (blur)="onBlurEmail($event)"
                 (focus)="focusEmail($event)">
         </div>
     </div>
     <div class="input-height" [ngClass]="{'focus': messageFocus}">
         <label for="text" [ngClass]="{'focus-label': messageFocusLabel}">Wie kann ich sie helfen?</label>
-        <textarea required placeholder="{{ messagePlaceholder }}" name="message" id="message"
-            (blur)="onBlurMessage($event)" (focus)="focusMessage($event)"></textarea>
+        <textarea
+            required
+            placeholder="{{ messagePlaceholder }}"
+            name="message"
+            id="message"
+            [(ngModel)]="message"
+            (blur)="onBlurMessage($event)"
+            (focus)="focusMessage($event)"></textarea>
     </div>
 
     <div class="input-checkbox-container">
-        <input type="checkbox">
-        <p>Ich habe das <a href="#">Imrpind</a> gelsen dasd dasdsa</p>
+        <input type="checkbox" [(ngModel)]="agbChecked" name="agbChecked">
+        <p>Ich habe das <a href="#">Impressum</a> gelesen.</p>
     </div>
 
     <div class="button-container">
-        <button (click)="test()" [disabled]="isSubmitting"> schicken</button>
+        <button [disabled]="!myForm.valid || !agbChecked || isSubmitting">schicken</button>
     </div>
-
-
 </form>
