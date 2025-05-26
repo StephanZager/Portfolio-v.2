@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
+import { IconBarComponent } from "../icon-bar/icon-bar.component";
 
 @Component({
   selector: 'app-header-menu',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, IconBarComponent],
   templateUrl: './header-menu.component.html',
   styleUrl: './header-menu.component.scss'
 })
