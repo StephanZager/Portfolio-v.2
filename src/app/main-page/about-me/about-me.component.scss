@@ -31,12 +31,29 @@
         height: 100%;
         max-width: 100%;
         max-height: 100%;
+
+         @media (max-width: $breakpoint-sm) {
+        max-width: 324px;
+    }   
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        height: 487px;
+        min-width: 100%;
     }
 }
 
 .about-me-section{
     height: 100%;
     @include flex($justify: normal, $align: flex-end, $direction: row);
+
+     @media (max-width: $breakpoint-sm) {
+            @include flex($justify: normal, $align: flex-end, $direction: column);
+        }
+     @media (max-width: $breakpoint-sm) {
+        width: 100%;
+        margin-top: 64px;
+    }    
 }
 
 .about-me-descripton {
@@ -68,6 +85,11 @@
             }
         }
     }
+
+    @media (max-width: $breakpoint-sm) {
+         margin-left: clamp(0px, 5vw, 32px);
+        margin-top: -80px;
+    }
 }
 
 .menu-ection{
@@ -81,5 +103,10 @@
 
      @media (max-width: $breakpoint-xl){
         right: -40px;
+     }
+
+     @media (max-width: $breakpoint-sm){
+        right: -32px;
+        top: -282px;
      }
 }

@@ -12,4 +12,8 @@
     span{
         color: white;
     }
+
+    @media(max-width: $breakpoint-md) {
+        width: 100%;
+    }
 }

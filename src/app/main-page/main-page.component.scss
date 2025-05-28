@@ -1,5 +1,11 @@
+@import './../styles/mixins';
+@import './../styles/variables';
+
+
+
 .main-page-container::-webkit-scrollbar {
     display: none;
+    
 }
 
 .main-page-container {
@@ -10,7 +16,11 @@
     overflow: auto;
     scroll-snap-type: y mandatory;
     
-    @media(max-height: 800px) {
+    //@media(max-height: 800px) {
+    //    scroll-snap-type: none;
+    //}
+
+    @media(max-width: $breakpoint-sm) {
         scroll-snap-type: none;
     }
 }
@@ -19,4 +29,10 @@
     width: 100%;
     height: 100%;
     scroll-snap-align: start;
+}
+
+.section-mobile-height-auto{
+    @media (max-width: $breakpoint-sm) {
+            height: auto !important;
+        }
 }

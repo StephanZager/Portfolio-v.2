@@ -8,23 +8,27 @@
     background-color: $white;
 }
 
-.headline-section{
+.headline-section {
     @include flex($justify: normal, $align: center);
     gap: 72px;
 
-    span{
+    span {
         margin-top: 160px;
         max-width: 500px;
         width: 100%;
-        text-align: center;
+        text-align: left;
+
+        @media(max-width: $breakpoint-md) {
+            margin-top: 0px;
+        }
     }
 
-  @media(max-width: $breakpoint-md){
-
-
-  }  
+    @media(max-width: $breakpoint-md) {
+        gap: 32px;
+        @include flex($justify: normal, $align: flex-start,$direction: column);
+    }
 }
 
-.projects-componente{
+.projects-componente {
     margin-top: 40px;
 }

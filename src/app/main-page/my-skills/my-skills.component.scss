@@ -20,6 +20,10 @@
     @media (min-height: 1000px) {
         @include flex($justify: space-around, $align: normal, $direction: column);
     }
+
+     @media(max-width: $breakpoint-sm) {
+        @include flex($justify: center, $align: center, $direction: normal);
+    }
 }
 
 .skills-description {
@@ -39,11 +43,22 @@
     margin-bottom: 115px;
 
     @media (max-width: $breakpoint-lg) and (max-height: 900px) {
-       margin-bottom: 50px;
-   }
+        margin-bottom: 50px;
+    }
 
-   // @media(max-width: 798px) {
-  //      margin-bottom: 50px;
-  //  }
+    @media (max-width: $breakpoint-sm) {
+        margin-bottom: 0px;
+        margin-top: 50px;
+        @include flex($justify: space-between, $align: center, $direction: column-reverse);
+
+        .circle{
+            margin-top: 32px;
+            align-self: flex-start;
+        }
+    }
+
+    // @media(max-width: 798px) {
+    //      margin-bottom: 50px;
+    //  }
 
 }

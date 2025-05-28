@@ -18,6 +18,11 @@
     span {
         color: $white;
     }
+
+    @media (max-width: $breakpoint-xs) {
+            width: 260px;
+            height: auto;
+        }
 }
 
 .learning-description {

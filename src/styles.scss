@@ -94,6 +94,27 @@ html {
     animation: up-and-douwn 600ms infinite alternate;
 }
 
+@keyframes thicken {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.04, 1.04); 
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.thicken {
+      @media (max-width: $breakpoint-sm) {
+        animation: thicken 1s infinite alternate;
+    }
+  
+}
+
+
+
 .content-limit {
     width: 1450px;
     height: 100%;
@@ -176,6 +197,9 @@ h1 {
     @media (max-width: $breakpoint-sm) {
         font-size: 72px;
     }
+    @media (max-width: $breakpoint-sm) and (max-height: 750px) {
+            font-size: 58px;
+        }
 
 
 }
@@ -192,6 +216,7 @@ h2 {
     }
     @media (max-width: $breakpoint-sm) {
         font-size: 40px;
+        margin-top: 0px;
     }
 }
 
@@ -238,4 +263,15 @@ button {
         background-color: #FF834F;
         transform: scaleX(99%);
     }
+
+     @media (max-width: $breakpoint-xs) {
+            font-size: 16px;
+        }
+}
+
+.padding-top-bottom-mobile{
+    @media (max-width: $breakpoint-sm) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
 }

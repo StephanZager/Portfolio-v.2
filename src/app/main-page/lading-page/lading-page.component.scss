@@ -18,10 +18,24 @@
     p {
         color: $white;
         font-size: 48px;
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: 32px;
+        }
+
+        @media (max-width: $breakpoint-sm) and (max-height: 750px) {
+            font-size: 22px;
+        }
+
     }
 
     h1 {
         color: $white;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -31,14 +45,21 @@
     top: 28px;
     left: 72px;
 
-     @media (max-width: $breakpoint-sm){
+    @media (max-width: $breakpoint-sm) {
         display: none;
-     }
+    }
 }
 
 .scroll-down {
     position: absolute;
     bottom: 96px;
+    z-index: 999;
+
+    @media (max-width: $breakpoint-sm) {
+        left: 10px;
+        bottom: 5px;
+
+    }
 }
 
 .headline-section {
@@ -49,11 +70,21 @@
 
     button {
         margin-top: 32px;
+
+        @media (max-width: $breakpoint-sm) {
+            margin-top: 22px;
+        }
     }
 
     @media (max-width: $breakpoint-md) {
-            width: 270px;
-        }
+        width: 270px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        margin-top: 80px;
+        align-self: center;
+        width: 100%;
+    }
 }
 
 .img-section {
@@ -73,6 +104,14 @@
             width: 280px;
             margin-bottom: 154px;
         }
+
+        @media (max-width: $breakpoint-sm) {
+            position: absolute;
+            width: 200px;
+            right: 0px;
+            top: 0px;
+            margin-bottom: 0px;
+        }
     }
 
     .avatar {
@@ -83,13 +122,40 @@
         z-index: 2;
 
         @media (max-width: $breakpoint-md) {
-             height: clamp(600px, 69vh, 900px);
+            height: clamp(600px, 69vh, 900px);
 
-             @media (min-height: 1200px) {
-            height: clamp(600px, 65vh, 900px);
-        }
+            @media (min-height: 1200px) {
+                height: clamp(600px, 65vh, 900px);
+            }
         }
 
+        @media (max-width: $breakpoint-sm) {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @media(min-height:1025px) {
+            object-fit: cover;
+        }
+
+        @media (max-width: 405px) and (min-height: 945px) {
+            object-fit: cover;
+        }
+
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        margin-top: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        max-width: 480px;
+    }
+
+    @media(max-width:$breakpoint-xs){
+        max-width: 100%;
     }
 
 }

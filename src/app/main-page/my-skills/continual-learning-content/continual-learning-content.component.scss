@@ -16,13 +16,27 @@
 
         &:hover~.rotating.circle {
             animation-play-state: paused;
-           
+
         }
     }
 
     .pop-up {
+        z-index: 999;
         position: absolute;
         bottom: 0px;
         left: 150px;
+
+        @media (max-width: $breakpoint-sm) {
+            left: 72px;
+            bottom: 100px;
+        }
+
+        @media (max-width: $breakpoint-xs) {
+            left: 50%;
+            bottom: 128px;
+            transform: translateX(-14%);
+        }
     }
+
+
 }

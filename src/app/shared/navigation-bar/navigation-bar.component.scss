@@ -20,6 +20,10 @@
     right: 10px;
   }
 
+  @media (max-width: $breakpoint-sm) {
+    display: none;
+  }
+
 }
 
 .navigation-content {
