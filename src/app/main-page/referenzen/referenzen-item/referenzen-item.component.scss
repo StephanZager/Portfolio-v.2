@@ -25,6 +25,10 @@
         text-decoration: none;
     }
 
+    @media(max-width: $breakpoint-sm) {
+        max-width: 100%;
+    }
+
 }
 
 .referenz-user {
@@ -40,6 +44,10 @@
             display: flex;
             
         }
+    }
+
+    @media(max-width: $breakpoint-sm) {
+        padding: 16px;
     }
 }
 

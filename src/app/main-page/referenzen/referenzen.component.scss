@@ -20,6 +20,12 @@
   margin-top: 48px;
   height: 500px;
 
+  @media(max-width: $breakpoint-sm) {
+        @include flex($justify: normal, $align: flex-start,$direction: column);
+        height: auto;
+        gap: 32px;
+    }
+
 }
 
 .referenz-item {
@@ -62,6 +68,8 @@
     position: relative;
     top: 0px;
     left: 0px;
+    width: 100%;
+    max-width: 100%;
 
     &:nth-child(2) {
       top: 0%;
