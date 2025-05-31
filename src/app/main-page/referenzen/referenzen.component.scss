@@ -1,6 +1,10 @@
 @import './../../styles/mixins';
 @import './../../styles/variables';
 
+.referenzen-content {
+  @include flex($justify: normal, $align: normal, $direction: column);
+}
+
 .referenzen-container {
   position: relative;
   @include flex($justify: center, $align: normal);
@@ -14,68 +18,38 @@
   }
 }
 
+
+
 .referenzen {
   position: relative;
-  @include flex($justify: space-between, $align: normal, $direction: normal);
+  @include flex($justify: space-between, $align: normal, $direction: row);
+  gap: 32px;
   margin-top: 48px;
-  height: 500px;
+  height: 100%;
+  padding-bottom: 128px;
 
   @media(max-width: $breakpoint-sm) {
-        @include flex($justify: normal, $align: flex-start,$direction: column);
-        height: auto;
-        gap: 32px;
-    }
+    @include flex($justify: normal, $align: flex-start, $direction: column);
+    height: auto;
+    gap: 32px;
+    padding-bottom: 0px;
+  }
 
 }
 
+.center-align {
+  align-self: center;
+}
+
+.end-align {
+  align-self: flex-end;
+}
+
 .referenz-item {
-  position: absolute;
-
-  &:nth-child(1) {
-    top: 0;
-    left: 0;
-  }
-
-  &:nth-child(2) {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &:nth-child(3) {
-    bottom: 0;
-    right: 0;
-  }
-
-  @media (max-width: $breakpoint-xl) {
-    width: 330px;
-
-  }
 
 
-  @media (max-width: $breakpoint-lg) {
-    width: 300px;
 
-  }
+  
 
-  @media (max-width: $breakpoint-md) {
-    width: 225px;
 
-  }
-
-  // Responsiv für kleine Bildschirme
-  @media (max-width: $breakpoint-sm) {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    max-width: 100%;
-
-    &:nth-child(2) {
-      top: 0%;
-      left: 0%;
-      transform: translate(0%, 0%);
-    }
-
-  }
 }

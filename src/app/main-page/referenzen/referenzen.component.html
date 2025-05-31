@@ -6,7 +6,7 @@
 
 
         <div class="referenzen">
-            <div *ngFor="let referenz of referenzenData" class="referenz-item">
+            <div *ngFor="let referenz of referenzenData; let i = index" class="referenz-item" [ngClass]="{'center-align': i ===1, 'end-align': i === 2}">
                 <app-referenzen-item [data]="referenz"></app-referenzen-item>
             </div>
         </div>
