@@ -46,5 +46,6 @@
 
     <div class="button-container">
         <button [disabled]="!myForm.valid || !agbChecked || isSubmitting">schicken</button>
+        <app-arrow-up class="arrow-up" (click)="scrollToSection()"></app-arrow-up>
     </div>
 </form>

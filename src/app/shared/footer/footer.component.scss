@@ -18,9 +18,27 @@ footer{
             color: $orange;
         }
     }
+
+    @media (max-width: $breakpoint-sm) {
+       @include flex($justify: space-between, $align: center,$direction:column);
+       margin-top: 24px;
+    }
 }
 
 .links{
     @include flex($justify: normal, $align: normal);
     gap: 32px;
+
+     @media (max-width: $breakpoint-sm) {
+        @include flex($justify: space-evenly, $align: normal);
+       width: 100%;
+       gap: 16px;
+       margin-top: 16px;
+    }
+
+     @media (max-width: $breakpoint-xs) {
+        @include flex($justify: space-between);
+       
+    }
+    
 }

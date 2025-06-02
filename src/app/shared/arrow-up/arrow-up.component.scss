@@ -18,6 +18,10 @@
         border-bottom-color: $orange;
         color: $orange;
     }
+
+     @media (max-width: $breakpoint-sm) {
+         font-size: 1.8rem;
+    }
 }
 
 @keyframes jump {

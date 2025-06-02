@@ -26,6 +26,10 @@ form {
     @media (max-width: $breakpoint-md){
         min-height: 495px;
     }
+
+    @media (max-width: $breakpoint-sm){
+       max-width: 400px;
+    }
 }
 
 .name-email-container {
@@ -82,4 +86,14 @@ button:disabled {
 
 .focus-label {
     color: $orange;
+}
+
+.arrow-up{
+    display: none;
+
+     @media (max-width: $breakpoint-sm) {
+        position: absolute;
+        right: 16px;
+       @include flex();
+    }
 }
