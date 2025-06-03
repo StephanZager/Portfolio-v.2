@@ -5,6 +5,7 @@ import { MainPageComponent } from "./main-page/main-page.component";
 import { HeaderComponent } from "./shared/header/header.component";
 import { ProjectsComponent } from "./main-page/my-work/projects/projects.component";
 import { NavigationBarComponent } from "./shared/navigation-bar/navigation-bar.component";
+import { Router } from '@angular/router';
 import {
   TranslateService,
   TranslatePipe,
@@ -21,7 +22,7 @@ import {
 export class AppComponent {
   title = 'portfolio';
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, public router: Router) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('de');
     this.translate.use('de');

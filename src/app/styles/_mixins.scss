@@ -1,7 +1,10 @@
 @import './variables';
 
-
-
+@mixin desktop-height {
+  @media (min-width: $breakpoint-sm) and (max-height: $breakpoint-heihgt-desktop) {
+    @content;
+  }
+}
 
 @mixin flex($justify: center, $align: center, $direction: row) {
   display: flex;

@@ -21,3 +21,9 @@
     height: 50px;
     background-color: inherit;
 }
+
+.header{
+     @media (max-width: $breakpoint-sm) {
+       display: none;
+    }
+}

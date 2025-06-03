@@ -39,6 +39,14 @@
     }
 }
 
+.header {
+    display: none;
+
+    @media (max-width: $breakpoint-sm) {
+        @include flex($justify: normal, $align: normal);
+    }
+}
+
 .icon-bar {
     z-index: 1000;
     position: absolute;
@@ -54,6 +62,11 @@
     position: absolute;
     bottom: 96px;
     z-index: 999;
+
+    @media (min-width: $breakpoint-sm) and (max-height: 860px) {
+        bottom: 16px;
+
+    }
 
     @media (max-width: $breakpoint-sm) {
         left: 10px;
@@ -74,6 +87,10 @@
         @media (max-width: $breakpoint-sm) {
             margin-top: 22px;
         }
+    }
+
+    @include desktop-height {
+        margin-top: 80px;
     }
 
     @media (max-width: $breakpoint-md) {
@@ -154,7 +171,7 @@
         max-width: 480px;
     }
 
-    @media(max-width:$breakpoint-xs){
+    @media(max-width:$breakpoint-xs) {
         max-width: 100%;
     }
 

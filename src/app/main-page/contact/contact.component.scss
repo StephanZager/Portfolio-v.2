@@ -70,13 +70,22 @@
 
 }
 
+.h2-contact{
+    @media (min-width: $breakpoint-sm) {
+        margin-top: 72px !important;
+    }
+   
+}
+
 .circle-desktop {
+    overflow: hidden;
     @media (max-width: $breakpoint-sm) {
         display: none;
     }
 }
 
 .circle-mobile {
+    overflow: hidden;
     display: none;
 
     @media (max-width: $breakpoint-sm) {

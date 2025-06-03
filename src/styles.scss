@@ -95,22 +95,24 @@ html {
 }
 
 @keyframes thicken {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.04, 1.04); 
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.04, 1.04);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 .thicken {
-      @media (max-width: $breakpoint-sm) {
+    @media (max-width: $breakpoint-sm) {
         animation: thicken 1s infinite alternate;
     }
-  
+
 }
 
 
@@ -188,18 +190,22 @@ h6 {
 
 h1 {
     font-size: 96px;
+
     @media (max-width: $breakpoint-lg) {
         font-size: 88px;
     }
+
     @media (max-width: $breakpoint-md) {
         font-size: 80px;
     }
+
     @media (max-width: $breakpoint-sm) {
         font-size: 72px;
     }
+
     @media (max-width: $breakpoint-sm) and (max-height: 750px) {
-            font-size: 58px;
-        }
+        font-size: 58px;
+    }
 
 
 }
@@ -208,12 +214,20 @@ h2 {
     margin-top: 160px;
     font-size: 72px;
     font-weight: 700;
+
+
+    @include desktop-height {
+        margin-top: 80px;
+    }
+
     @media (max-width: $breakpoint-lg) {
         font-size: 60px;
     }
+
     @media (max-width: $breakpoint-md) {
         font-size: 52px;
     }
+
     @media (max-width: $breakpoint-sm) {
         font-size: 40px;
         margin-top: 0px;
@@ -264,14 +278,14 @@ button {
         transform: scaleX(99%);
     }
 
-     @media (max-width: $breakpoint-xs) {
-            font-size: 16px;
-        }
+    @media (max-width: $breakpoint-xs) {
+        font-size: 16px;
+    }
 }
 
-.padding-top-bottom-mobile{
+.padding-top-bottom-mobile {
     @media (max-width: $breakpoint-sm) {
-            padding-top: 80px;
-            padding-bottom: 80px;
-        }
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
 }

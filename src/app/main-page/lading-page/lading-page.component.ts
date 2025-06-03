@@ -3,6 +3,8 @@ import { IconBarComponent } from "../../shared/icon-bar/icon-bar.component";
 import { ScrollDownComponent } from "./scroll-down/scroll-down.component";
 import { TranslateModule} from '@ngx-translate/core';
 
+
+
 @Component({
   selector: 'app-lading-page',
   standalone: true,
