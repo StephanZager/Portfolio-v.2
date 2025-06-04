@@ -5,11 +5,25 @@
     },
     "about-me": {
         "headline": "About me",
-        "description": "",
-        "button": "Let's talk"
+        "description": "Hello! I'm a frontend developer from the Stendal region, fascinated by the possibilities of IT. My passion is developing engaging and intuitive websites and apps. I work flexibly – whether on-site in Stendal or remotely. I see challenges as an opportunity to learn and expand my skills. For me, code is creative problem-solving to turn your visions into reality.",
+        "tagline": "Let's connect and create something amazing together",
+        "button": "Let's talk",
+        "popUp":{
+            "headline": "More about me",
+            "1":"Team player",
+            "2":"Continuously learning",
+            "3":"Creative Thinker",
+            "4":"Based in Stendal",
+            "5":"Open to work remote",
+            "6":"Open to relocate"
+        }
     },
     "my-skills": {
-        "description": "Emphasise that you have used a variety of front-end technologies in your projects. Where have you used these skills: static or dynamic websites, responsive layouts, data visualization interfaces, smooth user experiences?",
-        "popUp": ""
+        "headline":"Core Competencies",
+        "description": "In my projects, I have utilized a diverse range of front-end technologies. My experience includes creating static and dynamic websites, implementing responsive layouts, developing user-friendly and interactive user interfaces, and presenting data through engaging visualization tools.",
+        "popUp":{
+            "headline":"Don't see the skill you are looking for?",
+            "description":"Feel free to contact me. I look forward to expanding on my previous knowledge. Also I have a special interest in learning:"
+        }
     }
 }

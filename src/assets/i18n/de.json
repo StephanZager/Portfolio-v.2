@@ -1,16 +1,29 @@
- {
-    "lading-page":{
-        "headline":"Hallo ich bin",
+{
+    "lading-page": {
+        "headline": "Hallo ich bin",
         "button": "Kontaktieren Sie mich"
     },
-    "about-me":{
-        "headline":"Über mich",
-        "description":"",
-        "button":"Lass uns reden"
+    "about-me": {
+        "headline": "Über mich",
+        "description": "Hallo! Ich bin Frontend-Entwickler aus der Region Stendal, fasziniert von den Möglichkeiten der IT. Meine Leidenschaft ist die Entwicklung ansprechender und intuitiver Websites und Apps. Ich arbeite flexibel – ob vor Ort in Stendal oder remote. Herausforderungen sehe ich als Chance, zu lernen und meine Fähigkeiten zu erweitern. Code ist für mich kreative Problemlösung, um Ihre Visionen Realität werden zu lassen.",
+        "tagline": "Lassen Sie uns kennenlernen und gemeinsam etwas Großartiges erschaffen!",
+        "button": "Lass uns reden",
+        "popUp": {
+            "headline": "Mehr Über Mich",
+            "1": "Teamplayer",
+            "2": "Kontinuierliches Lernen",
+            "3": "Kreatives Denken",
+            "4": "Lebe in Stendal",
+            "5": "Offen für Remote-Arbeit",
+            "6": "Umzugsbereit"
+        }
     },
-    "my-skills":{
-        "description":"Ich habe in meinen Projekten bereits eine Vielzahl von Frontend-Technologien eingesetzt. Diese Fähigkeiten kamen in unterschiedlichen Bereichen zum Einsatz – etwa beim Erstellen von statischen und dynamischen Websites, bei der Umsetzung responsiver Layouts, in der Entwicklung von benutzerfreundlichen und interaktiven Benutzeroberflächen sowie bei der Darstellung von Daten über ansprechende Visualisierungstools.",
-        "popUp":""
+    "my-skills": {
+        "headline":"Kernkompetenz",
+        "description": "Ich habe in meinen Projekten bereits eine Vielzahl von Frontend-Technologien eingesetzt. Diese Fähigkeiten kamen in unterschiedlichen Bereichen zum Einsatz – etwa beim Erstellen von statischen und dynamischen Websites, bei der Umsetzung responsiver Layouts, in der Entwicklung von benutzerfreundlichen und interaktiven Benutzeroberflächen sowie bei der Darstellung von Daten über ansprechende Visualisierungstools.",
+        "popUp": {
+            "headline": "Die gesuchte Fähigkeit nicht dabei?",
+            "description": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein vorhandenes Wissen auszubauen. Außerdem habe ich ein besonderes Interesse daran, mehr in folgenden Bereichen zu lernen:"
+        }
     }
-
- }
+}
