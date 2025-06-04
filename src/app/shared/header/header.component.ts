@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { IconBarComponent } from "../icon-bar/icon-bar.component";
-import { MainPageComponent } from '../../main-page/main-page.component';
+//import { MainPageComponent } from '../../main-page/main-page.component';
 import { ScrollService } from '../../sevice/scroll.service';
 import { SectionService } from '../../sevice/section.service';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [IconBarComponent, MainPageComponent, CommonModule, HeaderMenuComponent, TranslateModule],
+  imports: [IconBarComponent, CommonModule, HeaderMenuComponent, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

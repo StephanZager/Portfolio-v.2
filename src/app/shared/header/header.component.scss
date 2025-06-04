@@ -14,9 +14,9 @@
     width: 100%;
     top: 0px;
 
-     @media (max-width: $breakpoint-sm) {
-       position: absolute;
-      
+    @media (max-width: $breakpoint-sm) {
+        position: absolute;
+        left: 0px;
     }
 }
 
@@ -25,6 +25,11 @@
     height: 100%;
     width: 100%;
     @include flex($justify: center, $align: center, $direction: normal);
+
+    @media(max-width: $breakpoint-sm) {
+        @include flex($justify: normal, $align: center, $direction: normal);
+        
+    } 
 }
 
 .logo {
@@ -41,6 +46,11 @@
     /* Sanfte Animation */
     transform: translateX(0);
     /* Standardposition */
+
+    @media(max-width: $breakpoint-sm) {
+       left: 72px;
+        
+    } 
 }
 
 .logo.about-me-logo {

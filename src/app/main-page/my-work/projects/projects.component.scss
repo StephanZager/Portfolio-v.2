@@ -13,7 +13,7 @@
         color: $white;
     }
 
-    @media(max-width: $breakpoint-md) {
+    @media(max-width: $breakpoint-sm) {
         @include flex($justify: space-between, $align: normal, $direction: column);
     }
 }
@@ -33,7 +33,7 @@
         height: 294px;
     }
 
-    @media(max-width: $breakpoint-md) {
+    @media(max-width: $breakpoint-sm) {
         width: 100%;
         min-width: 0px;
         height: 50%;
@@ -95,7 +95,7 @@
         }
     }
 
-    @media(max-width: $breakpoint-md) {
+    @media(max-width: $breakpoint-sm ) {
         max-width: 100%;
         height: 260px;
     }
@@ -145,7 +145,7 @@
         }
     }
 
-     @media(max-width: $breakpoint-md) {
+     @media(max-width: $breakpoint-sm) {
         margin-top: 16px;
     }
 
@@ -175,8 +175,9 @@
 .project-info-section {
     margin-left: 15px;
 
-    @media(max-width: $breakpoint-md) {
+    @media(max-width: $breakpoint-sm) {
         margin-left: 0px;
         margin-top: 16px;
     }
 }
+

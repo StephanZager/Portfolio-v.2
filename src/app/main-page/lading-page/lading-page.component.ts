@@ -2,13 +2,14 @@ import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@
 import { IconBarComponent } from "../../shared/icon-bar/icon-bar.component";
 import { ScrollDownComponent } from "./scroll-down/scroll-down.component";
 import { TranslateModule} from '@ngx-translate/core';
+import { HeaderComponent } from '../../shared/header/header.component';
 
 
 
 @Component({
   selector: 'app-lading-page',
   standalone: true,
-  imports: [IconBarComponent, ScrollDownComponent, TranslateModule],
+  imports: [IconBarComponent, ScrollDownComponent, TranslateModule, HeaderComponent],
   templateUrl: './lading-page.component.html',
   styleUrl: './lading-page.component.scss'
 })
