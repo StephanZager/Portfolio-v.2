@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ArrowUpComponent } from "../../../shared/arrow-up/arrow-up.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, ArrowUpComponent],
+  imports: [CommonModule, FormsModule, ArrowUpComponent, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
@@ -21,11 +22,9 @@ export class ContactFormComponent {
   nameError: boolean = false;
   emailError: boolean = false;
   messageError: boolean = false;
-
-
-  namePlaceholder: string = 'Dein Name hier';
-  emailPlaceholder: string = 'youremail@email.com';
-  messagePlaceholder: string = 'Hallo Stephan, ich habe Interesse...';
+  emailInvalid: boolean = false;
+  agbChecked: boolean = false;
+  privacyPolicyInteracted: boolean = false;
 
   nameFocus: boolean = false;
   emailFocus: boolean = false;
@@ -35,67 +34,65 @@ export class ContactFormComponent {
   emailFocusLabel: boolean = false;
   messageFocusLabel: boolean = false;
 
-  agbChecked: boolean = false;
 
-  emailInvalid: boolean = false;
-  emailInvalidText: string = 'Bitte gib eine gültige E-Mail-Adresse ein.';
+
+
 
   onCheckboxChange(event: Event) {
     const input = event.target as HTMLInputElement;
     this.agbChecked = input.checked;
+
+    if (this.agbChecked) {
+      this.privacyPolicyInteracted = true;
+    }
   }
 
   onBlurName(event: FocusEvent) {
     const input = event.target as HTMLInputElement;
-    if (!input.value) {
-      this.namePlaceholder = 'Bitte geben Sie Ihren Namen ein';
+    this.nameError = !input.value;
+
+    if (this.nameError) {
       input.classList.add('placeholder-error');
-      this.nameError = true;
-      this.nameFocusLabel = false;
     } else {
       input.classList.remove('placeholder-error');
-      this.nameError = false;
     }
   }
 
-onBlurEmail(event: FocusEvent) {
-  const input = event.target as HTMLInputElement;
-  if (!input.value) {
-    this.emailPlaceholder = 'Bitte geben Sie Ihre Email ein';
-    input.classList.add('placeholder-error');
-    this.emailError = true;
-    this.emailFocusLabel = false;
-    this.emailInvalid = false;
-  } else if (!input.checkValidity()) {
-    this.emailPlaceholder = this.emailInvalidText; 
-    input.classList.add('placeholder-error');
+  onBlurEmail(event: FocusEvent) {
+    const input = event.target as HTMLInputElement;
+
     this.emailError = false;
-    this.emailInvalid = true;
-    this.email = ''; 
-  } else {
+    this.emailInvalid = false;
     input.classList.remove('placeholder-error');
-    this.emailError = false;
-    this.emailInvalid = false;
+
+    if (!input.value) {
+      this.emailError = true;
+      input.classList.add('placeholder-error');
+
+    } else if (!input.checkValidity()) {
+      this.emailInvalid = true;
+      this.email = '';
+      input.classList.add('placeholder-error');
+
+    }
   }
-}
 
   onBlurMessage(event: FocusEvent) {
     const input = event.target as HTMLTextAreaElement;
-    if (!input.value) {
-      this.messagePlaceholder = 'Bitte geben Sie Ihre Nachricht ein';
+    this.messageError = !input.value;
+
+    if (this.messageError) {
       input.classList.add('placeholder-error');
-      this.messageError = true;
-      this.messageFocusLabel = false;
     } else {
       input.classList.remove('placeholder-error');
-      this.messageError = false;
     }
   }
+
 
   onSubmit(event: Event) {
     event.preventDefault();
     this.isSubmitting = true;
-    console.log(this.name,this.email,this.message)
+    console.log(this.name, this.email, this.message)
     this.resetForm();
   }
 
@@ -128,13 +125,15 @@ onBlurEmail(event: FocusEvent) {
     this.nameFocusLabel = false;
     this.emailFocusLabel = false;
     this.messageFocusLabel = false;
-}
+    this.agbChecked = false;
+    this.privacyPolicyInteracted = false;
+  }
 
-scrollToSection() {
+  scrollToSection() {
     const element = document.getElementById('ladingPage');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      
+
     }
   }
 }

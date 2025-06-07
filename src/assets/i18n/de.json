@@ -44,13 +44,43 @@
             }
         }
     },
-    "referenzen":{
+    "referenzen": {
         "headline": "Das sagen Kollegen über mich",
-        "feedback":{
-            "johannes":"Stephan hat sich als zuverlässige Gruppenpartnerin erwiesen. Ihre technischen Fähigkeiten und ihre proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
-            "andrei":"Die Zusammenarbeit mit Stephan bei einem intensiven Projekt an der Developer Akademie war ein echter Glücksfall. Mit ihrer ruhigen und konzentrierten Art hat sie unser Team zum Erfolg geführt. Die Arbeit mit ihr ist eine Freude und ich würde jederzeit gerne wieder mit ihr in einem Team sein.",
-            "jens":"Die Zusammenarbeit mit Stephan war ein echter Gewinn. Seine positive und zupackende Art hat nicht nur das Projekt beschleunigt, sondern auch das ganze Team motiviert."
+        "feedback": {
+            "johannes": "Stephan hat sich als zuverlässige Gruppenpartnerin erwiesen. Ihre technischen Fähigkeiten und ihre proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
+            "andrei": "Die Zusammenarbeit mit Stephan bei einem intensiven Projekt an der Developer Akademie war ein echter Glücksfall. Mit ihrer ruhigen und konzentrierten Art hat sie unser Team zum Erfolg geführt. Die Arbeit mit ihr ist eine Freude und ich würde jederzeit gerne wieder mit ihr in einem Team sein.",
+            "jens": "Die Zusammenarbeit mit Stephan war ein echter Gewinn. Seine positive und zupackende Art hat nicht nur das Projekt beschleunigt, sondern auch das ganze Team motiviert."
         }
-        
+    },
+    "contact": {
+        "headline": "Lass uns gemeinsam etwas Cooles bauen!",
+        "subheadline": "Sie haben ein Problem zu lösen?",
+        "description": "Ich bin ein Web-Entwickler, der mit Leidenschaft für sauberen Code und nutzerzentriertes Design robuste, intuitive Anwendungen schafft. Wenn Sie einen sorgfältigen und proaktiven Teamplayer für Ihre Projekte suchen, freue ich mich darauf, von Ihnen zu hören.",
+        "form": {
+            "nameInput": {
+                "headline": "Wie ist Ihr Name?",
+                "placeholder": "Ihr Name",
+                "errorMessage": "Hoppla! Bitte geben Sie Ihren Namen ein."
+            },
+            "emailInput": {
+                "headline": "Ihre E-Mail-Adresse",
+                "placeholder": "ihre.email@email.com",
+                "errorMessage": "Hoppla! Eine gültige E-Mail-Adresse ist erforderlich."
+            },
+            "messageInput": {
+                "headline": "Ihre Nachricht",
+                "placeholder": "Hallo Stephan, ich interessiere mich für...",
+                "errorMessage": "Bitte geben Sie Ihre Nachricht ein."
+            },
+            "privacyPolicy": {
+                "privacyPolicy": "Datenschutzerklärung",
+                "description": {
+                    "first": "Ich habe die ",
+                    "second": " gelesen und stimme der Verarbeitung meiner Daten zu."
+                },
+                "errorMessage": "Bitte akzeptieren Sie die Datenschutzerklärung."
+            },
+            "button": "Nachricht senden"
+        }
     }
 }

@@ -44,12 +44,43 @@
             }
         }
     },
-    "referenzen":{
+    "referenzen": {
         "headline": "Waht my colleagues say about me",
-        "feedback":{
-            "johannes":"Stephan has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
-            "andrei":"Teaming up with Stephan on an intensive project at the Developer Akademie was a true blessing. His calm and focused approach guided our team to success. He is a pleasure to work with, and I would happily join his team again in a heartbeat.",
-            "jens":"Collaborating with Stephan was a huge win. His positive, can-do attitude didn't just speed up the project; it also energized the whole team."
+        "feedback": {
+            "johannes": "Stephan has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+            "andrei": "Teaming up with Stephan on an intensive project at the Developer Akademie was a true blessing. His calm and focused approach guided our team to success. He is a pleasure to work with, and I would happily join his team again in a heartbeat.",
+            "jens": "Collaborating with Stephan was a huge win. His positive, can-do attitude didn't just speed up the project; it also energized the whole team."
+        }
+    },
+    "contact": {
+        "headline": "Let`s build something Cool together!",
+        "subheadline": "Got a problem to solve?",
+        "description": "I'm a web developer dedicated to creating robust and intuitive applications, driven by a passion for clean code and user-centered design. If your team needs a careful and proactive collaborator for its projects, I would love to hear from you.",
+        "form": {
+            "nameInput": {
+                "headline": "What's your name?",
+                "placeholder": "Your name goes here",
+                "errorMessage": "Oops! it seems your name is missing"
+            },
+            "emailInput": {
+                "headline": "What's your email?",
+                "placeholder": "youremail@email.com",
+                "errorMessage": "Hoppla! your email is required"
+            },
+            "messageInput": {
+                "headline": "How can I help you?",
+                "placeholder": "Hello Stephan, I am interested in...",
+                "errorMessage": "What do you need to develop?"
+            },
+            "privacyPolicy": {
+                "privacyPolicy": "privacy policy ",
+                "description": {
+                    "first":"I've read the ",
+                    "second":"and agree to the processing of my data."
+                },
+                "errorMessage": "Please accept the privacy policy."
+            },
+            "button": "Drop a Line"
         }
     }
 }

@@ -51,6 +51,7 @@ form {
 }
 
 .input-checkbox-container {
+    position: relative;
     @include flex($justify: normal, $align: center, $direction: normal);
     gap: 4px;
 
@@ -96,4 +97,15 @@ button:disabled {
         right: 16px;
        @include flex();
     }
+}
+
+.error-message{
+    color: $orange;
+    font-size: 14px;
+}
+
+.error-message-container{
+    position: absolute;
+    bottom: -24px;
+    
 }
