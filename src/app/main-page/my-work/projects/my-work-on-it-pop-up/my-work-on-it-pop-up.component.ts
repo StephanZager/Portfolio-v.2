@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-my-work-on-it-pop-up',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './my-work-on-it-pop-up.component.scss'
 })
 export class MyWorkOnItPopUpComponent {
+  @Input() text: string = '';
 
 }

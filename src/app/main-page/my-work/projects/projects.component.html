@@ -13,10 +13,12 @@
                 <h6>{{projects[curentProject].name}}</h6>
                 <img (mouseout)="closePopUp()" (mouseover)="openPopUp()" class="up-douwn"
                     [src]="projects[curentProject].img.icon" alt="">
-                <app-my-work-on-it-pop-up class="pop-up" *ngIf="isPopUpVisible"></app-my-work-on-it-pop-up>
+                <app-my-work-on-it-pop-up class="pop-up" *ngIf="isPopUpVisible"
+                    [text]="projects[curentProject].popupText | translate">
+                </app-my-work-on-it-pop-up>
             </div>
             <p>{{getTechnologies(curentProject)}}</p>
-            <span>{{projects[curentProject].description}}</span>
+            <span>{{projects[curentProject].description | translate}}</span>
 
             <div class="project-buttons">
                 <button>

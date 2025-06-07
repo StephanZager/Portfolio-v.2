@@ -19,11 +19,29 @@
         }
     },
     "my-skills": {
-        "headline":"Kernkompetenz",
+        "headline": "Kernkompetenz",
         "description": "Ich habe in meinen Projekten bereits eine Vielzahl von Frontend-Technologien eingesetzt. Diese Fähigkeiten kamen in unterschiedlichen Bereichen zum Einsatz – etwa beim Erstellen von statischen und dynamischen Websites, bei der Umsetzung responsiver Layouts, in der Entwicklung von benutzerfreundlichen und interaktiven Benutzeroberflächen sowie bei der Darstellung von Daten über ansprechende Visualisierungstools.",
         "popUp": {
             "headline": "Die gesuchte Fähigkeit nicht dabei?",
             "description": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein vorhandenes Wissen auszubauen. Außerdem habe ich ein besonderes Interesse daran, mehr in folgenden Bereichen zu lernen:"
+        }
+    },
+    "portfolio": {
+        "headline": "Meine Arbeit",
+        "description": "Sehen Sie sich hier eine Auswahl meiner Projekte an und überzeugen Sie sich von meinen Fähigkeiten.",
+        "projects": {
+            "dabubble": {
+                "description": "Als Klon von Slack revolutioniert diese App die Kommunikation und Zusammenarbeit im Team – dank einer intuitiven Benutzeroberfläche, Nachrichten in Echtzeit und einer durchdachten Organisation der Kanäle.",
+                "popup": "Meine Hauptaufgabe im „dabubble“-Projekt war die Entwicklung eines sicheren und robusten Benutzer-Managements. Dafür habe ich Firebase Authentication integriert, um die Registrierung, die Anmeldung und die Funktion zum Zurücksetzen des Passworts zu realisieren. Im Frontend-Bereich war ich für die Umsetzung der Designs mit modernem HTML und CSS verantwortlich. Als engagierter Teamplayer habe ich auch regelmäßig meine Kollegen bei der Lösung von Problemen unterstützt, um den gemeinsamen Fortschritt voranzutreiben."
+            },
+            "join": {
+                "description": "Task-Manager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+                "popup": "Im „Join“-Projekt habe ich eine vielseitige Rolle eingenommen. Mein primärer Fokus war die Entwicklung der Kontaktverwaltung, wo ich die Funktionen zum Erstellen und Bearbeiten von Benutzern implementiert habe. Außerdem habe ich die „Summary“-Ansicht gestaltet, die als zentrale Übersichtsseite dient. Abseits davon war ich tief in die Frontend-Entwicklung involviert und habe das Team bei der Umsetzung der Designs mit HTML und CSS unterstützt. Auch bei den Kernstücken der Anwendung, dem Drag-and-Drop-Board und dem „Add Task“-Dialog, konnte ich wichtige Beiträge leisten und bei der Finalisierung helfen."
+            },
+            "elPolloLoco": {
+                "description": "Ein einfaches Jump-and-Run-Spiel basierend auf objektorientiertem Programmieren. Hilf Pedro, Münzen und Giftflaschen zu finden, um gegen das Killerhuhn zu kämpfen.",
+                "popup": "Ich habe dieses Spiel von Grund auf konzipiert und entwickelt – von der Mechanik über das Leveldesign bis zur Gegner-KI. Besonderen Wert habe ich darauf gelegt, ein durchgehend flüssiges Spielerlebnis zu schaffen."
+            }
         }
     }
 }
