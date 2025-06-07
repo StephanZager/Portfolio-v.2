@@ -43,5 +43,13 @@
                 "popup": "I built this game from scratch, taking full ownership of the concept, mechanics, level design, and enemy AI. My primary goal was to deliver a seamless and fluid gameplay experience."
             }
         }
+    },
+    "referenzen":{
+        "headline": "Waht my colleagues say about me",
+        "feedback":{
+            "johannes":"Stephan has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+            "andrei":"Teaming up with Stephan on an intensive project at the Developer Akademie was a true blessing. His calm and focused approach guided our team to success. He is a pleasure to work with, and I would happily join his team again in a heartbeat.",
+            "jens":"Collaborating with Stephan was a huge win. His positive, can-do attitude didn't just speed up the project; it also energized the whole team."
+        }
     }
 }
