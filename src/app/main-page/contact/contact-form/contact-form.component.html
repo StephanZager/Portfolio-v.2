@@ -29,7 +29,7 @@
     <div class="input-checkbox-container">
         <input type="checkbox" [(ngModel)]="agbChecked" name="agbChecked" required (change)="onCheckboxChange($event)">
         <p>{{'contact.form.privacyPolicy.description.first' | translate}}<a
-                href="#">{{'contact.form.privacyPolicy.privacyPolicy' |
+                routerLink="/privacy-policy">{{'contact.form.privacyPolicy.privacyPolicy' |
                 translate}}</a>{{'contact.form.privacyPolicy.description.second' | translate}}</p>
         <div class="error-message-container" *ngIf="privacyPolicyInteracted && !agbChecked">
             <span class="error-message">{{'contact.form.privacyPolicy.errorMessage' | translate}}</span>

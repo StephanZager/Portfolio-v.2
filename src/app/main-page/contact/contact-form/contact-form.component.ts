@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ArrowUpComponent } from "../../../shared/arrow-up/arrow-up.component";
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, ArrowUpComponent, TranslateModule],
+  imports: [CommonModule, FormsModule, ArrowUpComponent, TranslateModule, RouterModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })

@@ -1,0 +1,59 @@
+@import './../../styles/mixins';
+@import './../../styles/variables';
+
+.privacy-policy-container {
+    @include flex($justify: center, $align: normal);
+    width: 100%;
+    height: auto;
+    background-color: $blue;
+}
+
+.privacy-content {
+    @include flex($justify: center, $align: center, $direction: column);
+    margin-top: 160px;
+    color: $white;
+    width: 100%;
+
+    h2 {
+        margin-top: 80px;
+    }
+
+    h3 {
+        padding: 18px;
+    }
+
+    h4 {
+        padding: 14px;
+    }
+
+    @media(max-width: 1100px) {
+        h1 {
+            max-width: 900px;
+            font-size: 60px;
+            text-align: center;
+            overflow-wrap: break-word;
+
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    @media(max-width: $breakpoint-sm) {
+        margin-top: 0px;
+
+        h1 {
+            max-width: 257px;
+            font-size: 40px;
+            -webkit-hyphens: auto;      
+            -ms-hyphens: auto;        
+            hyphens: auto;
+        }
+    }
+}
+
+.button-container{
+    align-self: flex-start;
+    margin-bottom: 24px;
+}

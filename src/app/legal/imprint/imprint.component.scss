@@ -1,0 +1,26 @@
+@import './../../styles/mixins';
+@import './../../styles/variables';
+
+.imprint-container {
+    @include flex($justify: center, $align: normal);
+    width: 100%;
+    height: 100%;
+    background-color: $blue;
+}
+
+.imprint-content {
+    @include flex($justify: center, $align: center, $direction: column);
+}
+
+.imprint {
+    color: $white;
+
+    h2{
+        margin-top: 0px;
+    }
+}
+
+.button-container{
+    align-self: flex-start;
+    margin-bottom: 54px;
+}
