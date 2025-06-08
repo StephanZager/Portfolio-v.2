@@ -44,6 +44,9 @@
   background-color: $white;
   border-radius: 100px;
   cursor: pointer;
+  transition:
+    border-radius 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    rotate 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-content a.active {

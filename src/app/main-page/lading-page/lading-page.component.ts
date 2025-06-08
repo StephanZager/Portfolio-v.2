@@ -15,6 +15,13 @@ import { HeaderComponent } from '../../shared/header/header.component';
 })
 export class LadingPageComponent {
 
+  scrollToSection() {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    }
+  }
 
 }
 

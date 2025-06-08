@@ -13,7 +13,7 @@
                     {{'about-me.tagline'| translate }}</span>
 
                 <div class="button-section">
-                    <button>{{'about-me.button' | translate}}</button>
+                    <button (click)="scrollToSection()">{{'about-me.button' | translate}}</button>
 
                     <div class="menu-section">
                         <img (mouseover)="openMenu()" (mouseout)="closeMenu()" class="up-douwn"

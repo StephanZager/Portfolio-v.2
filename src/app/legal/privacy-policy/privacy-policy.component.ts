@@ -16,5 +16,11 @@ export class PrivacyPolicyComponent {
 
   goBack() {
     this.location.back();
+    setTimeout(() => {
+      const element = document.getElementById('contact');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 200);
   }
 }

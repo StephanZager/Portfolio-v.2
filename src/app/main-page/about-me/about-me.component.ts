@@ -11,6 +11,14 @@ import { TranslateModule} from '@ngx-translate/core';
   styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
+  
+  scrollToSection() {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    }
+  }
 
   isMenuVisible = false;
 

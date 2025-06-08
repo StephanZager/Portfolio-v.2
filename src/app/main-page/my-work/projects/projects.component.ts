@@ -53,8 +53,8 @@ export class ProjectsComponent {
         bg: '#FF834F',
         icon: './../../../../assets/img/icons/loco-chicken.svg',
       },
-      linkGithub: 'https://github.com/StephanZager/join.git',
-      linkLive: 'https://www.join.stephan-zager.de//',
+      linkGithub: 'https://github.com/StephanZager/El-Pollo-Loco.git',
+      linkLive: 'https://www.el-pollo-loco.stephan-zager.de/index.html',
     }
   ];
 

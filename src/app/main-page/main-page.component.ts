@@ -37,11 +37,18 @@ export class MainPageComponent implements AfterViewInit {
     const scrollPosition = this.mainPageContainer.nativeElement.scrollTop;
     this.scrollService.setScrolled(scrollPosition > 50);
 
+
+    let activeSectionFound = false;
+
     const sections = this.mainPageContainer.nativeElement.querySelectorAll('.section');
     sections.forEach((section: HTMLElement) => {
       const rect = section.getBoundingClientRect();
-      if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+      if (rect.top >= 0 && rect.top < window.innerHeight / 2 && !activeSectionFound) {
+        section.classList.add('is-active');
         this.sectionService.setCurrentSection(section.id);
+        activeSectionFound = true;
+      } else {
+        section.classList.remove('is-active');
       }
     });
 

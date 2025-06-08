@@ -21,12 +21,18 @@
             <span>{{projects[curentProject].description | translate}}</span>
 
             <div class="project-buttons">
-                <button>
-                    <img src="./../../../../assets/img/icons/arrow-right.svg" alt="">
-                    GitHub</button>
-                <button>
-                    <img src="./../../../../assets/img/icons/arrow-right.svg" alt="">
-                    Live Test</button>
+                <a [href]="projects[curentProject].linkGithub" target="_blank" rel="noopener">
+                    <button>
+                        <img src="./../../../../assets/img/icons/arrow-right.svg" alt="">
+                        GitHub
+                    </button>
+                </a>
+                <a [href]="projects[curentProject].linkLive" target="_blank" rel="noopener">
+                    <button>
+                        <img src="./../../../../assets/img/icons/arrow-right.svg" alt="">
+                        Live Test
+                    </button>
+                </a>
             </div>
         </div>
 

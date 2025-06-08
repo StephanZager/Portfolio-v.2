@@ -23,6 +23,7 @@ export class NavigationBarComponent {
 
   isScrolled = false;
   currentSection: string = '';
+  isVisible = true;
 
   constructor(private router: Router, private sectionService: SectionService) { }
 
@@ -31,14 +32,18 @@ export class NavigationBarComponent {
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-
         this.activeRoute = event.urlAfterRedirects.split('/')[1];
+
+        if (this.activeRoute === 'imprint' || this.activeRoute === 'privacy-policy') {
+          this.isVisible = false;
+        } else {
+          this.isVisible = true;
+        }
       }
     });
 
     this.sectionService.currentSection$.subscribe((section) => {
       this.currentSection = section;
-      console.log(this.currentSection)
     });
   }
 

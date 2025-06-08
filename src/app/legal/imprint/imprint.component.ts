@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Location } from '@angular/common';
 import { FooterComponent } from "../../shared/footer/footer.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-imprint',
@@ -12,9 +13,15 @@ import { FooterComponent } from "../../shared/footer/footer.component";
 })
 export class ImprintComponent {
 
-  constructor(private location: Location) {}
+  constructor(private location: Location) { }
 
   goBack() {
     this.location.back();
+    setTimeout(() => {
+      const element = document.getElementById('contact');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 200);
   }
 }
