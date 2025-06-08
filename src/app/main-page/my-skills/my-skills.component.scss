@@ -21,7 +21,7 @@
         @include flex($justify: space-around, $align: normal, $direction: column);
     }
 
-     @media(max-width: $breakpoint-sm) {
+    @media(max-width: $breakpoint-sm) {
         @include flex($justify: center, $align: center, $direction: normal);
     }
 }
@@ -34,6 +34,10 @@
     max-width: 600px;
     width: 100%;
     height: auto;
+
+    @media(max-width: $breakpoint-sm) {
+        padding: 16px;
+    }
 }
 
 .subcomponent {
@@ -51,14 +55,9 @@
         margin-top: 50px;
         @include flex($justify: space-between, $align: center, $direction: column-reverse);
 
-        .circle{
+        .circle {
             margin-top: 32px;
             align-self: flex-start;
         }
     }
-
-    // @media(max-width: 798px) {
-    //      margin-bottom: 50px;
-    //  }
-
 }

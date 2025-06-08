@@ -16,4 +16,7 @@
     @media(max-width: $breakpoint-md) {
         width: 100%;
     }
+    @media(max-width: $breakpoint-sm) {
+        padding: 16px;
+    }
 }

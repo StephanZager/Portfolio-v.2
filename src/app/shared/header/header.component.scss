@@ -28,11 +28,13 @@
 
     @media(max-width: $breakpoint-sm) {
         @include flex($justify: normal, $align: center, $direction: normal);
-        
-    } 
+
+    }
 }
 
 .logo {
+    @include flex($justify: normal, $align: center, $direction: normal);
+    gap: 16px;
     color: $white;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
@@ -41,16 +43,19 @@
     width: 150px;
     letter-spacing: 2px;
     position: relative;
-    /* Ermöglicht die Animation */
-    transition: transform 0.4s ease;
-    /* Sanfte Animation */
+    transition: transform 0.4s ease;   
     transform: translateX(0);
-    /* Standardposition */
+    
 
     @media(max-width: $breakpoint-sm) {
-       left: 72px;
-        
-    } 
+        left: 72px;
+
+    }
+
+    @media(max-width: $breakpoint-xs) {
+        left: 16px;
+
+    }
 }
 
 .logo.about-me-logo {
@@ -65,6 +70,10 @@
 
 .logo.scrolled {
     transform: translateX(-400px);
+     @media(max-width: $breakpoint-md) {
+       transform: translateX(clamp(-244px, -30vw, -400px));
+
+    }
 }
 
 .header-menus {
@@ -72,6 +81,11 @@
     right: 72px;
     gap: 16px;
     @include flex($justify: normal, $align: center, $direction: normal);
+
+    @media(max-width: $breakpoint-xs) {
+        right: 16px;
+
+    }
 }
 
 .menu-section {
@@ -82,6 +96,12 @@
     position: absolute;
     top: -16px;
     right: -50px;
+
+    @media(max-width: $breakpoint-xs) {
+        right: 0px;
+
+    }
+
 }
 
 .burger-menu {

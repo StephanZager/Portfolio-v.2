@@ -86,9 +86,14 @@
         }
     }
 
+    @media (max-width: $breakpoint-md) {
+         margin-top: 24px;
+    }
+
     @media (max-width: $breakpoint-sm) {
          margin-left: clamp(0px, 5vw, 32px);
         margin-top: -80px;
+        
     }
 }
 
@@ -106,7 +111,12 @@
      }
 
      @media (max-width: $breakpoint-sm){
-        right: -32px;
-        top: -282px;
+        right: 24px;
+        top: 32px;
+     }
+
+     @media (max-width: $breakpoint-xs){
+        right: 0px;
+        top: 32px;
      }
 }

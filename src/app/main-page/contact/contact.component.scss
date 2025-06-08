@@ -95,8 +95,10 @@
 }
 
 .form{
+    width: 50%;
    @media (max-width: $breakpoint-sm) {
         @include flex($justify: center, $align: center, $direction: column);
+        width: 100%;
     } 
 }
 
