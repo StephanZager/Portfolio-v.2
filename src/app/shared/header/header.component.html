@@ -12,14 +12,14 @@
                 <button [ngClass]="{'about-me-btn': currentSection === 'aboutMe', 
                                     'my-work-btn': currentSection === 'myWork'
                                      }" class="language-btn" (click)="toggleLanguage()">
-                    {{ currentLanguage === 'de' ? 'DE' : 'EN' }}
+                    {{ translate.currentLang === 'de' ? 'DE' : 'EN' }}
                 </button>
                 
 
             </div>
 
             <div class="menu-section">
-                <div class="burger-menu" (click)="openMenu()" [ngClass]="{
+                <div class="burger-menu" (click)="toggleHeaderMenu()" [ngClass]="{
             'about-me-menu': currentSection === 'aboutMe',
             'my-work-menu': currentSection === 'myWork'
         }">
@@ -28,7 +28,7 @@
                     <div class="line3"></div>
                 </div>
 
-                <app-header-menu class="menu" *ngIf="toggleMenu"></app-header-menu>
+                <app-header-menu class="menu" *ngIf="isMenuOpen"></app-header-menu>
             </div>
 
 

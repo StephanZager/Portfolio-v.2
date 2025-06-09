@@ -27,8 +27,8 @@ export class ProjectsComponent {
         icon: './../../../../assets/img/icons/capa.svg',
 
       },
-      linkGithub: 'https://github.com/StephanZager/join.git',
-      linkLive: 'https://www.join.stephan-zager.de//',
+      linkGithub: 'https://github.com/StephanZager/DABubble',
+      linkLive: 'https://www.dabubble.stephan-zager.de/',
     },
     {
       name: 'Join',

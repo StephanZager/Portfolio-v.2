@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { IconBarComponent } from "../icon-bar/icon-bar.component";
 //import { MainPageComponent } from '../../main-page/main-page.component';
 import { ScrollService } from '../../sevice/scroll.service';
@@ -6,6 +6,8 @@ import { SectionService } from '../../sevice/section.service';
 import { CommonModule } from '@angular/common';
 import { HeaderMenuComponent } from "../header-menu/header-menu.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MenuService } from '../../sevice/menu.service';
+import { Subscription } from 'rxjs'
 
 @Component({
   selector: 'app-header',
@@ -14,17 +16,24 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   isScrolled: boolean = false;
-  toggleMenu: boolean = false;
-  currentLanguage = 'de';
+  isMenuOpen = false;
+  private menuSubscription: Subscription | undefined;
+
+  //currentLanguage = 'de';
   currentSection: string = '';
 
-  constructor(private scrollService: ScrollService, private sectionService: SectionService, private translate: TranslateService) {
+  constructor(private scrollService: ScrollService, private sectionService: SectionService, public translate: TranslateService, private menuService: MenuService) {
     this.translate.setDefaultLang('de');
   }
 
   ngOnInit() {
+
+    this.menuSubscription = this.menuService.menuOpen$.subscribe(isOpen => {
+      this.isMenuOpen = isOpen;
+    });
+
     this.scrollService.scroll$.subscribe((scrolled) => {
       this.isScrolled = scrolled;
 
@@ -32,6 +41,15 @@ export class HeaderComponent implements OnInit {
     this.sectionService.currentSection$.subscribe((section) => {
       this.currentSection = section;
     });
+  }
+
+  ngOnDestroy() {
+    this.menuSubscription?.unsubscribe();
+  }
+
+
+  toggleHeaderMenu() {
+    this.menuService.toggleMenu();
   }
 
   @HostListener('window:scroll', [])
@@ -58,11 +76,12 @@ export class HeaderComponent implements OnInit {
 
 
   toggleLanguage() {
-    this.currentLanguage = this.currentLanguage === 'de' ? 'en' : 'de';
-    this.translate.use(this.currentLanguage);
-  }
+    // Lese die aktuelle Sprache aus dem Service
+    const current = this.translate.currentLang;
+    const newLang = current === 'de' ? 'en' : 'de';
 
-  openMenu() {
-    this.toggleMenu = true;
+    // Setze die neue Sprache über den Service.
+    // Dies benachrichtigt die gesamte App über die Änderung.
+    this.translate.use(newLang);
   }
 }
