@@ -114,8 +114,25 @@
     overflow: hidden;
 
     .circle {
-        margin-bottom: 300px;
+        margin-bottom: 250px;
         width: 350px;
+
+        @media (min-width: $breakpoint-sm) and (min-height:1400px) {
+            top: 64px;
+            position: absolute;
+        }
+
+        @media (min-width:768px) and (min-height: 1306px) {
+            margin-bottom: 0;
+        }
+
+        @media (min-width:768px) and (max-height: 700px) {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+            margin-bottom: 0;
+        }
 
         @media (max-width: $breakpoint-md) {
             width: 280px;
@@ -163,6 +180,21 @@
 
     }
 
+    @media (min-width: $breakpoint-sm) and (min-height:1400px) {
+        padding-top: 1000px;
+        height: auto !important;
+    }
+
+    @media (min-width: $breakpoint-sm) and (max-height:600px) {
+        padding-top: 200px;
+        height: auto !important;
+    }
+
+    @media (max-width: $breakpoint-sm) and (min-height:600px) {
+        padding-top: 0px;
+        height: auto !important;
+    }
+
     @media (max-width: $breakpoint-sm) {
         margin-top: 20px;
         justify-content: center;
@@ -177,18 +209,20 @@
 
 }
 
-.header-mobile{
-   display: none;
+.header-mobile {
+    display: none;
+
     @media (min-width:768px) and (min-height: 1306px) {
         display: flex;
     }
 
     @media (min-width:768px) and (max-height: 700px) {
-       display: flex;
-    }
-   @media(max-width: $breakpoint-sm) {
         display: flex;
-    } 
+    }
+
+    @media(max-width: $breakpoint-sm) {
+        display: flex;
+    }
 }
 
 
@@ -199,5 +233,5 @@
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    transition: top 0.5s ease, left 0.5s ease, transform 0.5s ease; 
+    transition: top 0.5s ease, left 0.5s ease, transform 0.5s ease;
 }

@@ -21,9 +21,9 @@
 }
 
 .img-container {
-   height: 76vh;
-   width: 100%;
-   min-width: 504px;
+    height: 76vh;
+    width: 100%;
+    min-width: 504px;
 
     img {
         object-fit: contain;
@@ -32,9 +32,21 @@
         max-width: 100%;
         max-height: 100%;
 
-         @media (max-width: $breakpoint-sm) {
-        max-width: 324px;
-    }   
+        @media (max-width: $breakpoint-sm) {
+            max-width: 324px;
+        }
+    }
+
+    @media (min-width:768px) and (min-height: 1306px) {
+        height: auto;
+    }
+
+    @media (min-width:768px) and (max-height: 700px) {
+        height: auto;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        height: auto;
     }
 
     @media (max-width: $breakpoint-sm) {
@@ -43,17 +55,18 @@
     }
 }
 
-.about-me-section{
+.about-me-section {
     height: 100%;
     @include flex($justify: normal, $align: flex-end, $direction: row);
 
-     @media (max-width: $breakpoint-sm) {
-            @include flex($justify: normal, $align: flex-end, $direction: column);
-        }
-     @media (max-width: $breakpoint-sm) {
+    @media (max-width: $breakpoint-sm) {
+        @include flex($justify: normal, $align: flex-end, $direction: column);
+    }
+
+    @media (max-width: $breakpoint-sm) {
         width: 100%;
         margin-top: 64px;
-    }    
+    }
 }
 
 .about-me-descripton {
@@ -87,17 +100,17 @@
     }
 
     @media (max-width: $breakpoint-md) {
-         margin-top: 24px;
+        margin-top: 24px;
     }
 
     @media (max-width: $breakpoint-sm) {
-         margin-left: clamp(0px, 5vw, 32px);
+        margin-left: clamp(0px, 5vw, 32px);
         margin-top: -80px;
-        
+
     }
 }
 
-.menu-ection{
+.menu-ection {
     position: relative;
 }
 
@@ -106,17 +119,17 @@
     right: -200px;
     top: 48px;
 
-     @media (max-width: $breakpoint-xl){
+    @media (max-width: $breakpoint-xl) {
         right: -40px;
-     }
+    }
 
-     @media (max-width: $breakpoint-sm){
+    @media (max-width: $breakpoint-sm) {
         right: 24px;
         top: 32px;
-     }
+    }
 
-     @media (max-width: $breakpoint-xs){
+    @media (max-width: $breakpoint-xs) {
         right: 0px;
         top: 32px;
-     }
+    }
 }

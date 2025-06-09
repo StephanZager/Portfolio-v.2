@@ -2,6 +2,7 @@
 @import './../../styles/variables';
 
 .imprint-container {
+    padding-top: 0px !important;
     position: relative;
     @include flex($justify: center, $align: normal);
     width: 100%;
@@ -17,19 +18,35 @@
 .imprint {
     color: $white;
 
-    h2{
+    h2 {
         margin-top: 0px;
     }
 }
 
-.button-container{
+.button-container {
     align-self: flex-start;
     margin-bottom: 54px;
 }
 
-.footer{
+.footer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+.header-mobile {
+    display: none;
+
+    @media (min-width:768px) and (min-height: 1306px) {
+        display: flex;
+    }
+
+    @media (min-width:768px) and (max-height: 700px) {
+        display: flex;
+    }
+
+    @media(max-width: $breakpoint-sm) {
+        display: flex;
+    }
 }
