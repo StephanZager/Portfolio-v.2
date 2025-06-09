@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { IconBarComponent } from "../icon-bar/icon-bar.component";
-//import { MainPageComponent } from '../../main-page/main-page.component';
+import { Router, NavigationEnd } from '@angular/router';
 import { ScrollService } from '../../sevice/scroll.service';
 import { SectionService } from '../../sevice/section.service';
 import { CommonModule } from '@angular/common';
@@ -19,12 +19,14 @@ import { Subscription } from 'rxjs'
 export class HeaderComponent implements OnInit, OnDestroy {
   isScrolled: boolean = false;
   isMenuOpen = false;
-  private menuSubscription: Subscription | undefined;
+  showMenuSection = true;
 
-  //currentLanguage = 'de';
+  private menuSubscription: Subscription | undefined;
+  private routerSubscription: Subscription | undefined;
+
   currentSection: string = '';
 
-  constructor(private scrollService: ScrollService, private sectionService: SectionService, public translate: TranslateService, private menuService: MenuService) {
+  constructor(private scrollService: ScrollService, private sectionService: SectionService, public translate: TranslateService, private menuService: MenuService, private router: Router) {
     this.translate.setDefaultLang('de');
   }
 
@@ -41,10 +43,21 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.sectionService.currentSection$.subscribe((section) => {
       this.currentSection = section;
     });
+
+    this.routerSubscription = this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        if (event.urlAfterRedirects.startsWith('/imprint') || event.urlAfterRedirects.startsWith('/privacy-policy')) {
+          this.showMenuSection = false;
+        } else {
+          this.showMenuSection = true;
+        }
+      }
+    });
   }
 
   ngOnDestroy() {
     this.menuSubscription?.unsubscribe();
+    this.routerSubscription?.unsubscribe();
   }
 
 

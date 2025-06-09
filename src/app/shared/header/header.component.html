@@ -18,7 +18,7 @@
 
             </div>
 
-            <div class="menu-section">
+            <div class="menu-section" *ngIf="showMenuSection">
                 <div class="burger-menu" (click)="toggleHeaderMenu()" [ngClass]="{
             'about-me-menu': currentSection === 'aboutMe',
             'my-work-menu': currentSection === 'myWork'
