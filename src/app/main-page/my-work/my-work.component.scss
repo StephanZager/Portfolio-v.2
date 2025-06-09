@@ -8,24 +8,55 @@
     background-color: $white;
 }
 
+.my-work-content{
+    @media (min-width:768px) and (min-height: 950px) {
+            @include flex($justify: center, $align: center, $direction: column);
+        }
+}
+
 .headline-section {
     @include flex($justify: normal, $align: center);
     gap: 72px;
 
+    h2{
+         @media (min-width:768px) and (min-height: 950px) {
+            margin-top: 0px;
+        }
+    }
     span {
         margin-top: 160px;
         max-width: 500px;
         width: 100%;
         text-align: left;
 
+         @media (min-width:768px) and (min-height: 950px) {
+            margin-top: 0px;;
+        }
+
+        @media (min-width:768px) and (min-height: 1306px) {
+            margin-top: 0px !important;
+        }
+
+        @media (min-width:768px) and (max-height: 700px) {
+            margin-top: 0px !important;
+        }
+
+        @include desktop-height {
+        margin-top: 80px;
+    }
+
         @media(max-width: $breakpoint-md) {
             margin-top: 0px;
         }
     }
 
+     @media (min-width:768px) and (min-height: 950px) {
+           align-self: flex-start;
+        }
+
     @media(max-width: $breakpoint-md) {
         gap: 32px;
-        @include flex($justify: normal, $align: flex-start,$direction: column);
+        @include flex($justify: normal, $align: flex-start, $direction: column);
     }
 }
 

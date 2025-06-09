@@ -1,34 +1,67 @@
 @import './../../../styles/mixins';
 @import './../../../styles/variables';
 
-.circle-container{
+.circle-container {
+  width: 374px;
+  height: 264px;
+  position: relative;
+
+  img {
+    position: absolute;
+    object-fit: contain;
+  }
+
+  @media (min-width: $breakpoint-sm) and (max-height: 850px) {
+    width: 246px;
+    height: 182px;
+  }
+
+  @media (min-width: $breakpoint-sm) and (max-height: 778px) {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-sm) and (max-height: 700px) {
+    display: flex;
     width: 374px;
     height: 264px;
-    position: relative;
+  }
 
-    img{
-        position: absolute;
-        object-fit: contain;       
-    }
-
-    @media (max-width: $breakpoint-md) {
+  @media (max-width: $breakpoint-md) {
     width: 225px;
 
   }
 }
 
-.circle-orange{
-    bottom: 0px;
+.circle-orange {
+  bottom: 0px;
+  width: 180px;
+
+  @media (min-width: $breakpoint-sm) and (max-height: 850px) {
+    width: 140px;
+  }
+
+  @media (min-width: $breakpoint-sm) and (max-height: 700px) {
     width: 180px;
-    @media (max-width: $breakpoint-md) {
+  }
+
+  @media (max-width: $breakpoint-md) {
     width: 140px;
 
   }
 }
 
-.circle-blue{
-   right: 0;
-   @media (max-width: $breakpoint-md) {
+.circle-blue {
+  right: 0;
+
+  @media (min-width: $breakpoint-sm) and (max-height: 850px) {
+    width: 180px;
+  }
+
+   @media (min-width: $breakpoint-sm) and (max-height: 700px) {
+    width: 240px;
+  }
+
+  @media (max-width: $breakpoint-md) {
     width: 180px;
     top: 32px;
 

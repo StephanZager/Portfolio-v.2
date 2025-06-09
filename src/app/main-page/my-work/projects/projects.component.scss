@@ -38,6 +38,13 @@
         }
     }
 
+    @media (min-width: $breakpoint-sm) and (max-height: 760px){
+        height: 400px;
+    }
+    @media (min-width: $breakpoint-sm) and (max-height: 700px){
+        height: 488px;
+    }
+
     @media(max-width: $breakpoint-sm) {
         width: 100%;
         min-width: 0px;
