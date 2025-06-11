@@ -115,8 +115,6 @@ html {
 
 }
 
-
-
 .content-limit {
     width: 1450px;
     height: 100%;
@@ -306,4 +304,74 @@ button {
         padding-top: 80px;
         padding-bottom: 80px;
     }
+}
+
+
+
+///////////////////////////////////////////ANIMATION/////////////////////////////////////
+/// 
+/* 1. START-ZUSTAND (Element ist versteckt) */
+.fly-in-from-right {
+    opacity: 0;
+    transform: translateX(100%);
+    /* Beginnt rechts außerhalb des Bildes */
+    transition: all 700ms ease-out;
+    /* Wartet auf eine Änderung */
+}
+
+/* 2. END-ZUSTAND (wird durch Directive hinzugefügt) */
+.fly-in-from-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Bewegt sich an die finale Position */
+}
+
+/* Optional: Füge hier weitere Animationen hinzu, z.B. .fade-in */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+}
+
+.fly-in-from-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    /* Startet links außerhalb des Bildes */
+    transition: all 700ms ease-out;
+}
+
+/* 2. END-ZUSTAND */
+.fly-in-from-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fly-in-from-top {
+    opacity: 0;
+    transform: translateY(-100%);
+    /* Startet oben außerhalb des Bildes */
+    transition: all 1.5s ease-out;
+}
+
+/* 2. END-ZUSTAND */
+.fly-in-from-top.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 1. START-ZUSTAND */
+.fly-in-from-bottom {
+    opacity: 0;
+    transform: translateY(100%);
+    /* Startet unten außerhalb des Bildes */
+    transition: all 1s ease-out;
+}
+
+/* 2. END-ZUSTAND */
+.fly-in-from-bottom.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }

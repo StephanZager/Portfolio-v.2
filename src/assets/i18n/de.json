@@ -5,7 +5,7 @@
     },
     "about-me": {
         "headline": "Über mich",
-        "description": "Hallo! Ich bin Frontend-Entwickler aus der Region Stendal, fasziniert von den Möglichkeiten der IT. Meine Leidenschaft ist die Entwicklung ansprechender und intuitiver Websites und Apps. Ich arbeite flexibel – ob vor Ort in Stendal oder remote. Herausforderungen sehe ich als Chance, zu lernen und meine Fähigkeiten zu erweitern. Code ist für mich kreative Problemlösung, um Ihre Visionen Realität werden zu lassen.",
+        "description": "Hallo! Ich bin Frontend-Entwickler aus der Region Stendal und fasziniert von den Möglichkeiten des Webs. Meine Leidenschaft ist die Entwicklung ansprechender und intuitiver Webseiten, die Nutzer begeistern. Herausforderungen sehe ich als Chance, zu lernen und meine Fähigkeiten zu erweitern. Für mich ist Code ein Werkzeug für kreative Problemlösung, um aus Ideen funktionale und ansprechende Webseiten zu schaffen.",
         "tagline": "Lassen Sie uns kennenlernen und gemeinsam etwas Großartiges erschaffen!",
         "button": "Lass uns reden",
         "popUp": {
@@ -15,7 +15,7 @@
             "3": "Kreatives Denken",
             "4": "Lebe in Stendal",
             "5": "Offen für Remote-Arbeit",
-            "6": "Umzugsbereit"
+            "6": "Qualitätsbewusstsein"
         }
     },
     "my-skills": {
@@ -47,8 +47,8 @@
     "referenzen": {
         "headline": "Das sagen Kollegen über mich",
         "feedback": {
-            "johannes": "Stephan hat sich als zuverlässige Gruppenpartnerin erwiesen. Ihre technischen Fähigkeiten und ihre proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
-            "andrei": "Die Zusammenarbeit mit Stephan bei einem intensiven Projekt an der Developer Akademie war ein echter Glücksfall. Mit ihrer ruhigen und konzentrierten Art hat sie unser Team zum Erfolg geführt. Die Arbeit mit ihr ist eine Freude und ich würde jederzeit gerne wieder mit ihr in einem Team sein.",
+            "johannes": "Stephan hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und seine proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
+            "andrei": "Die Zusammenarbeit mit Stephan bei einem intensiven Projekt an der Developer Akademie war ein echter Glücksfall. Mit seiner ruhigen und konzentrierten Art hat er unser Team zum Erfolg geführt. Die Arbeit mit ihm ist eine Freude und ich würde jederzeit gerne wieder mit ihm in einem Team sein.",
             "jens": "Die Zusammenarbeit mit Stephan war ein echter Gewinn. Seine positive und zupackende Art hat nicht nur das Projekt beschleunigt, sondern auch das ganze Team motiviert."
         }
     },
