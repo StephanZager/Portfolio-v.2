@@ -4,7 +4,7 @@
         <app-arrow-up class="arrow-up" (click)="scrollToSection()"></app-arrow-up>
 
         <div class="left-section">
-            <div class="headline-section">
+            <div class="headline-section fly-in-from-left" appAnimateOnScroll>
                 <h2 class="h2-contact">
                     {{'contact.headline' | translate}}
                 </h2>
@@ -14,10 +14,10 @@
                 <span>{{'contact.description' | translate}}
                 </span>
             </div>
-            <app-circle class="circle-desktop"></app-circle>
+            <app-circle class="circle-desktop fly-in-from-bottom" appAnimateOnScroll></app-circle>
         </div>
 
-        <app-contact-form class="form"></app-contact-form>
+        <app-contact-form class="form fly-in-from-right" appAnimateOnScroll></app-contact-form>
         <app-footer class="footer"></app-footer>
         <app-circle class="circle-mobile"></app-circle>
 

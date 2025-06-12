@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MyWorkOnItPopUpComponent } from "./my-work-on-it-pop-up/my-work-on-it-pop-up.component";
 import { TranslateModule } from '@ngx-translate/core';
-
+import { AnimateOnScrollDirective } from '../../../directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, MyWorkOnItPopUpComponent,TranslateModule],
+  imports: [CommonModule, MyWorkOnItPopUpComponent,TranslateModule,AnimateOnScrollDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

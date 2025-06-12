@@ -3,11 +3,12 @@ import { ReferenzenItemComponent } from "./referenzen-item/referenzen-item.compo
 import { link } from 'fs';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { AnimateOnScrollDirective } from '../../directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-referenzen',
   standalone: true,
-  imports: [ReferenzenItemComponent, CommonModule, TranslateModule],
+  imports: [ReferenzenItemComponent, CommonModule, TranslateModule,AnimateOnScrollDirective],
   templateUrl: './referenzen.component.html',
   styleUrl: './referenzen.component.scss'
 })
