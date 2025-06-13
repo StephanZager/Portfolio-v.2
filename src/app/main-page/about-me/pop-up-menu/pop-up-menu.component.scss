@@ -9,6 +9,8 @@
     background-color: $blue;
     border: 1px solid $black;
     border-radius: 4px;
+    position: relative;
+    z-index: 9999 !important;
 
     h6{
         text-align: center;

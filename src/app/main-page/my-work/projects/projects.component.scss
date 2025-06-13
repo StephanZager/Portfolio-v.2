@@ -2,6 +2,8 @@
 @import './../../../styles/variables';
 
 .project-container {
+    position: relative;
+    z-index: 999;
     @include flex($justify: space-between);
 
     h6 {

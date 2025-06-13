@@ -56,8 +56,15 @@
         @include flex($justify: space-between, $align: center, $direction: column-reverse);
 
         .circle {
+            position: relative;
+            z-index: 999;
             margin-top: 32px;
             align-self: flex-start;
         }
     }
+}
+
+.circle {
+    position: relative;
+    z-index: 999;
 }

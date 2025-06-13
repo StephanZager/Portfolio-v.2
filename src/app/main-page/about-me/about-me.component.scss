@@ -71,6 +71,8 @@
 
 .about-me-descripton {
     @include flex($justify: space-between, $align: flex-start, $direction: column);
+    position: relative;
+    z-index: 999;
     align-self: center;
     padding: 32px;
     background-color: $black;
@@ -119,6 +121,9 @@
     right: -200px;
     top: 48px;
 
+    transform: translateX(-100%);
+    transition: transform 700ms ease-out;
+
     @media (max-width: $breakpoint-xl) {
         right: -40px;
     }
@@ -132,4 +137,10 @@
         right: 0px;
         top: 32px;
     }
+}
+
+.menu.is-visible {
+
+    transform: translateY(0);
+
 }
