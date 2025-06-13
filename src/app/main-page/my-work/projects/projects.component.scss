@@ -40,10 +40,11 @@
         }
     }
 
-    @media (min-width: $breakpoint-sm) and (max-height: 760px){
+    @media (min-width: $breakpoint-sm) and (max-height: 760px) {
         height: 400px;
     }
-    @media (min-width: $breakpoint-sm) and (max-height: 700px){
+
+    @media (min-width: $breakpoint-sm) and (max-height: 700px) {
         height: 488px;
     }
 
@@ -116,19 +117,20 @@
                 transform: rotate(-60deg);
             }
 
-           
+
         }
 
-         @media(max-width: 850px){
-                @include flex($justify: center, $align: center, $direction: column);
-                gap: 16px;
-                align-self: center;
-            }
-        @media(max-width: $breakpoint-sm){
-                @include flex();
-                align-self: auto;
-                
-            }    
+        @media(max-width: 850px) {
+            @include flex($justify: center, $align: center, $direction: column);
+            gap: 16px;
+            align-self: center;
+        }
+
+        @media(max-width: $breakpoint-sm) {
+            @include flex();
+            align-self: auto;
+
+        }
 
         @media(max-width: 400px) {
             gap: 16px;
@@ -227,12 +229,21 @@
     position: absolute;
     top: -116x;
     right: 68px;
+    opacity: 0;
+    transform: translateX(-300%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 
     @media(max-width: $breakpoint-sm) {
         left: 32px;
         top: 32px;
         right: 32px;
     }
+}
+
+.pop-up.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .project-info-section {

@@ -19,8 +19,8 @@
                         <img (mouseover)="openMenu()" (mouseout)="closeMenu()" class="up-douwn"
                             src="./../../../assets/img/icons/speak- smiley.svg" alt="">
 
-                        <app-pop-up-menu class="menu" [ngClass]="{'is-visible': isMenuVisible}"
-                            *ngIf="isMenuVisible"></app-pop-up-menu>
+                        <app-pop-up-menu class="menu" [class.is-visible]="isMenuVisible">
+                        </app-pop-up-menu>
                     </div>
 
                 </div>

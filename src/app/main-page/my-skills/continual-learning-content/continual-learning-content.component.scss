@@ -25,6 +25,9 @@
         position: absolute;
         bottom: 0px;
         left: 150px;
+        opacity: 0;
+        transform: translateX(300%);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 
         @media (max-width: $breakpoint-sm) {
             left: 72px;
@@ -32,10 +35,16 @@
         }
 
         @media (max-width: $breakpoint-xs) {
-            left: 50%;
+            left: 35%;
             bottom: 128px;
             transform: translateX(-14%);
         }
+    }
+
+    .pop-up.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
 
