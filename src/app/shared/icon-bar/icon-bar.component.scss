@@ -16,18 +16,39 @@
     }
 }
 
-.icon-desktop{
+.icon-desktop {
 
-    
-     @media (max-width: $breakpoint-sm){
+
+    @media (max-width: $breakpoint-sm) {
         display: none;
-     }
+    }
 }
 
-.icon-mobile{
+.icon-mobile {
     display: none;
 
-     @media (max-width: $breakpoint-sm){
+    @media (max-width: $breakpoint-sm) {
         display: flex;
-     }
+    }
+}
+
+.icon-bar-content a {
+    position: relative;
+
+    .icon-hover {
+        display: none;
+
+    }
+
+    &:hover {
+
+        .icon-desktop,
+        .icon-mobile {
+            display: none;
+        }
+
+        .icon-hover {
+            display: block;
+        }
+    }
 }
