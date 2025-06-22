@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ArrowUpComponent } from "../../../shared/arrow-up/arrow-up.component";
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,6 +15,8 @@ import { RouterModule } from '@angular/router';
 })
 
 export class ContactFormComponent {
+
+  http = inject(HttpClient);
 
   isSubmitting: boolean = false;
   name: string = '';
