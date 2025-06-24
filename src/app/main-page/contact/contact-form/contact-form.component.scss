@@ -114,3 +114,11 @@ button:disabled {
     bottom: -24px;
     
 }
+
+.width-50{
+    width: 50%;
+
+    @media (max-width: $breakpoint-md){
+        width: 100%;
+    }
+}

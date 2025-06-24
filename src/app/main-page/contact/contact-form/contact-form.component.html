@@ -1,14 +1,14 @@
 <form #myForm="ngForm" (submit)="onSubmit($event)">
 
     <div class="name-email-container">
-        <div class="input-height name-container" [ngClass]="{'focus': nameFocus}">
+        <div class="input-height name-container width-50" [ngClass]="{'focus': nameFocus}">
             <label for="name" [ngClass]="{'focus-label': nameFocusLabel}">{{'contact.form.nameInput.headline' |
                 translate}}</label>
             <input required type="text" id="name" name="name"
                 [placeholder]="(nameError ? 'contact.form.nameInput.errorMessage' : 'contact.form.nameInput.placeholder') | translate"
                 [(ngModel)]="name" (blur)="onBlurName($event)" (focus)="focusName($event)">
         </div>
-        <div class="input-height" [ngClass]="{'focus': emailFocus}">
+        <div class="input-height width-50" [ngClass]="{'focus': emailFocus}">
             <label for="email" [ngClass]="{'focus-label': emailFocusLabel}">{{'contact.form.emailInput.headline' |
                 translate}}</label>
             <input pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required type="email" id="email"
