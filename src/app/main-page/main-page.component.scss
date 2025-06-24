@@ -17,7 +17,7 @@
     scroll-snap-type: y mandatory;
 
     @media (min-width:768px) and (min-height: 1306px) {
-        scroll-snap-type: none;
+        
     }
 
     @media (min-width:768px) and (max-height: 700px) {
@@ -39,7 +39,7 @@
 
 .section-mobile-height-auto {
     @media (min-width:768px) and (min-height: 1306px) {
-        height: auto !important;
+       
     }
 
     @media (min-width:768px) and (max-height: 700px) {
@@ -54,7 +54,7 @@
 .section-mobile-height-lading-page {
 
     @media (min-height:1400px) {
-        height: auto !important;
+       
     }
 
     @media (min-width: $breakpoint-sm) and (max-height:600px) {
