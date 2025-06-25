@@ -1,4 +1,4 @@
-<form #myForm="ngForm" (submit)="onSubmit($event)">
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
 
     <div class="name-email-container">
         <div class="input-height name-container width-50" [ngClass]="{'focus': nameFocus}">
@@ -6,7 +6,7 @@
                 translate}}</label>
             <input required type="text" id="name" name="name"
                 [placeholder]="(nameError ? 'contact.form.nameInput.errorMessage' : 'contact.form.nameInput.placeholder') | translate"
-                [(ngModel)]="name" (blur)="onBlurName($event)" (focus)="focusName($event)">
+                [(ngModel)]="contactData.name" (blur)="onBlurName($event)" (focus)="focusName($event)">
         </div>
         <div class="input-height width-50" [ngClass]="{'focus': emailFocus}">
             <label for="email" [ngClass]="{'focus-label': emailFocusLabel}">{{'contact.form.emailInput.headline' |
@@ -14,7 +14,7 @@
             <input pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required type="email" id="email"
                 name="email"
                 [placeholder]="(emailError ? 'contact.form.emailInput.errorMessage' : (emailInvalid ? 'contact.form.emailInput.errorMessage' : 'contact.form.emailInput.placeholder')) | translate"
-                [(ngModel)]="email" (blur)="onBlurEmail($event)" (focus)="focusEmail($event)">
+                [(ngModel)]="contactData.email" (blur)="onBlurEmail($event)" (focus)="focusEmail($event)">
         </div>
     </div>
     <div class="input-height" [ngClass]="{'focus': messageFocus}">
@@ -22,7 +22,7 @@
             translate}}</label>
         <textarea required
             [placeholder]="(messageError ? 'contact.form.messageInput.errorMessage' : 'contact.form.messageInput.placeholder') | translate"
-            name="message" id="message" [(ngModel)]="message" (blur)="onBlurMessage($event)"
+            name="message" id="message" [(ngModel)]="contactData.message" (blur)="onBlurMessage($event)"
             (focus)="focusMessage($event)"></textarea>
     </div>
 

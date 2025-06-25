@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { ArrowUpComponent } from "../../../shared/arrow-up/arrow-up.component";
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
@@ -19,9 +19,12 @@ export class ContactFormComponent {
   http = inject(HttpClient);
 
   isSubmitting: boolean = false;
-  name: string = '';
-  email: string = '';
-  message: string = '';
+ 
+  contactData={
+    name:"",
+    email:"",
+    message:"",
+  }
 
   nameError: boolean = false;
   emailError: boolean = false;
@@ -38,7 +41,18 @@ export class ContactFormComponent {
   emailFocusLabel: boolean = false;
   messageFocusLabel: boolean = false;
 
+  mailTest = false;
 
+  post = {
+    endPoint: 'https://stephan-zager.de//sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
 
 
 
@@ -75,7 +89,7 @@ export class ContactFormComponent {
 
     } else if (!input.checkValidity()) {
       this.emailInvalid = true;
-      this.email = '';
+      this.contactData.email = '';
       input.classList.add('placeholder-error');
 
     }
@@ -93,11 +107,62 @@ export class ContactFormComponent {
   }
 
 
-  onSubmit(event: Event) {
-    event.preventDefault();
-    this.isSubmitting = true;
-    console.log(this.name, this.email, this.message)
-    this.resetForm();
+  onSubmit(ngForm: NgForm) {
+
+    if (ngForm.submitted && ngForm.form.valid && this.agbChecked) {
+      this.isSubmitting = true;
+
+      
+      if (!this.mailTest) {
+        this.http.post(this.post.endPoint, this.post.body(this.contactData))
+          .subscribe({
+            next: (response) => {
+              console.log('E-Mail erfolgreich gesendet:', response);
+              this.resetAll(ngForm);
+            },
+            error: (error) => {
+              console.error('Fehler beim Senden der E-Mail:', error);
+              this.isSubmitting = false; 
+            },
+            complete: () => {
+              console.info('Send post complete');
+              this.isSubmitting = false;
+            },
+          });
+      } else {
+        // Wenn mailTest true ist (Testmodus)
+        console.log('Test-Modus: Formular ist gültig, aber es wird keine E-Mail gesendet.');
+        console.log('Gesendete Daten:', this.contactData);
+        this.resetAll(ngForm);
+        // Kurze Verzögerung simulieren, um UI-Feedback zu sehen
+        setTimeout(() => {
+            this.isSubmitting = false;
+        }, 1000);
+      }
+    } else if (ngForm.submitted && !this.agbChecked) {
+        // Behandelt den Fall, dass die Datenschutzrichtlinie nicht akzeptiert wurde
+        this.privacyPolicyInteracted = true;
+    }
+  }
+
+   resetAll(ngForm: NgForm) {
+      ngForm.resetForm(); 
+      this.resetCustomFlags();
+  }
+
+  resetCustomFlags() {
+      this.agbChecked = false;
+      this.nameError = false;
+      this.emailError = false;
+      this.messageError = false;
+      this.emailInvalid = false;
+      this.nameFocus = false;
+      this.emailFocus = false;
+      this.messageFocus = false;
+      this.nameFocusLabel = false;
+      this.emailFocusLabel = false;
+      this.messageFocusLabel = false;
+      this.privacyPolicyInteracted = false;
   }
 
   focusName(event: FocusEvent) {
@@ -113,24 +178,6 @@ export class ContactFormComponent {
   focusMessage(event: FocusEvent) {
     this.messageFocus = true;
     this.messageFocusLabel = true;
-  }
-
-  resetForm() {
-    this.name = '';
-    this.email = '';
-    this.message = '';
-    this.agbChecked = false;
-    this.nameError = false;
-    this.emailError = false;
-    this.messageError = false;
-    this.nameFocus = false;
-    this.emailFocus = false;
-    this.messageFocus = false;
-    this.nameFocusLabel = false;
-    this.emailFocusLabel = false;
-    this.messageFocusLabel = false;
-    this.agbChecked = false;
-    this.privacyPolicyInteracted = false;
   }
 
   scrollToSection() {
