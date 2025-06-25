@@ -60,7 +60,7 @@
             "nameInput": {
                 "headline": "What's your name?",
                 "placeholder": "Your name goes here",
-                "errorMessage": "Oops! it seems your name is missing"
+                "errorMessage": "Oops! Your name is missing."
             },
             "emailInput": {
                 "headline": "What's your email?",

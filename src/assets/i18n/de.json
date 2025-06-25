@@ -60,12 +60,12 @@
             "nameInput": {
                 "headline": "Wie ist Ihr Name?",
                 "placeholder": "Ihr Name",
-                "errorMessage": "Hoppla! Bitte geben Sie Ihren Namen ein."
+                "errorMessage": "Hoppla! Der Name fehlt."
             },
             "emailInput": {
                 "headline": "Ihre E-Mail-Adresse",
                 "placeholder": "ihre.email@email.com",
-                "errorMessage": "Hoppla! Eine gültige E-Mail-Adresse ist erforderlich."
+                "errorMessage": "Hoppla! E-Mail ungültig."
             },
             "messageInput": {
                 "headline": "Ihre Nachricht",
