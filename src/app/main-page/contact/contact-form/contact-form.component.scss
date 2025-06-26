@@ -6,7 +6,8 @@ form {
     min-height: 380px;
     max-width: 600px;
     width: 100%;
-   
+    position: relative;
+
 
     input {
         background: transparent;
@@ -23,12 +24,12 @@ form {
         color: $white;
     }
 
-    @media (max-width: $breakpoint-md){
+    @media (max-width: $breakpoint-md) {
         min-height: 495px;
     }
 
-    @media (max-width: $breakpoint-sm){
-       max-width: 400px;
+    @media (max-width: $breakpoint-sm) {
+        max-width: 400px;
     }
 }
 
@@ -36,18 +37,18 @@ form {
     @include flex($justify: space-between, $align: normal, $direction: normal);
 
     @media (max-width: $breakpoint-md) {
-    @include flex($justify: space-between, $align: normal, $direction: column);
+        @include flex($justify: space-between, $align: normal, $direction: column);
 
-  }
+    }
 }
 
-.name-container{
+.name-container {
     margin-right: 32px;
 
-     @media (max-width: $breakpoint-md) {
-     margin-right: 0px;
+    @media (max-width: $breakpoint-md) {
+        margin-right: 0px;
 
-  }
+    }
 }
 
 .input-checkbox-container {
@@ -90,35 +91,55 @@ button:disabled {
     color: $orange;
 }
 
-.arrow-up{
+.arrow-up {
     display: none;
 
-     @media (max-width: $breakpoint-sm) {
+    @media (max-width: $breakpoint-sm) {
         position: absolute;
         right: 16px;
-       @include flex();
+        @include flex();
     }
 }
 
-.error-message{
+.error-message {
     color: $orange;
     font-size: 14px;
 
-    @media(max-width: 350px){
+    @media(max-width: 350px) {
         font-size: 12px;
     }
 }
 
-.error-message-container{
+.error-message-container {
     position: absolute;
     bottom: -24px;
-    
+
 }
 
-.width-50{
+.width-50 {
     width: 50%;
 
-    @media (max-width: $breakpoint-md){
+    @media (max-width: $breakpoint-md) {
         width: 100%;
     }
+}
+
+.send-mail {
+
+    z-index: 999;
+    position: absolute;
+    padding: 32px;
+    background-color: $blue;
+    border: 1px solid $white ;
+    color: $white;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+
+}
+
+.send-mail.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(100%, 100%);
 }

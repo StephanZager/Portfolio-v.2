@@ -19,11 +19,11 @@ export class ContactFormComponent {
   http = inject(HttpClient);
 
   isSubmitting: boolean = false;
- 
-  contactData={
-    name:"",
-    email:"",
-    message:"",
+
+  contactData = {
+    name: "",
+    email: "",
+    message: "",
   }
 
   nameError: boolean = false;
@@ -42,9 +42,10 @@ export class ContactFormComponent {
   messageFocusLabel: boolean = false;
 
   mailTest = false;
+  isEmailSendVisible = false;
 
   post = {
-    endPoint: 'https://stephan-zager.de//sendMail.php',
+    endPoint: 'https://stephan-zager.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -112,57 +113,50 @@ export class ContactFormComponent {
     if (ngForm.submitted && ngForm.form.valid && this.agbChecked) {
       this.isSubmitting = true;
 
-      
+
       if (!this.mailTest) {
         this.http.post(this.post.endPoint, this.post.body(this.contactData))
           .subscribe({
             next: (response) => {
-              console.log('E-Mail erfolgreich gesendet:', response);
+              this.emailSendPopUp()
               this.resetAll(ngForm);
             },
             error: (error) => {
-              console.error('Fehler beim Senden der E-Mail:', error);
-              this.isSubmitting = false; 
+              this.isSubmitting = false;
             },
             complete: () => {
-              console.info('Send post complete');
               this.isSubmitting = false;
             },
           });
       } else {
-        // Wenn mailTest true ist (Testmodus)
-        console.log('Test-Modus: Formular ist gültig, aber es wird keine E-Mail gesendet.');
-        console.log('Gesendete Daten:', this.contactData);
         this.resetAll(ngForm);
-        // Kurze Verzögerung simulieren, um UI-Feedback zu sehen
         setTimeout(() => {
-            this.isSubmitting = false;
+          this.isSubmitting = false;
         }, 1000);
       }
     } else if (ngForm.submitted && !this.agbChecked) {
-        // Behandelt den Fall, dass die Datenschutzrichtlinie nicht akzeptiert wurde
-        this.privacyPolicyInteracted = true;
+      this.privacyPolicyInteracted = true;
     }
   }
 
-   resetAll(ngForm: NgForm) {
-      ngForm.resetForm(); 
-      this.resetCustomFlags();
+  resetAll(ngForm: NgForm) {
+    ngForm.resetForm();
+    this.resetCustomFlags();
   }
 
   resetCustomFlags() {
-      this.agbChecked = false;
-      this.nameError = false;
-      this.emailError = false;
-      this.messageError = false;
-      this.emailInvalid = false;
-      this.nameFocus = false;
-      this.emailFocus = false;
-      this.messageFocus = false;
-      this.nameFocusLabel = false;
-      this.emailFocusLabel = false;
-      this.messageFocusLabel = false;
-      this.privacyPolicyInteracted = false;
+    this.agbChecked = false;
+    this.nameError = false;
+    this.emailError = false;
+    this.messageError = false;
+    this.emailInvalid = false;
+    this.nameFocus = false;
+    this.emailFocus = false;
+    this.messageFocus = false;
+    this.nameFocusLabel = false;
+    this.emailFocusLabel = false;
+    this.messageFocusLabel = false;
+    this.privacyPolicyInteracted = false;
   }
 
   focusName(event: FocusEvent) {
@@ -186,5 +180,12 @@ export class ContactFormComponent {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     }
+  }
+
+  emailSendPopUp() {
+    this.isEmailSendVisible = true;
+    setTimeout(() => {
+      this.isEmailSendVisible = false;
+    }, 2000);
   }
 }
