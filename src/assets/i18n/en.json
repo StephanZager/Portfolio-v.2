@@ -29,6 +29,10 @@
     "portfolio": {
         "headline": "My work",
         "description": "Explore a selection of my work here - Interact with the projects to see my skills in action.",
+        "arrow": {
+            "left": "Previous project",
+            "right": "Next project"
+        },
         "projects": {
             "dabubble": {
                 "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",

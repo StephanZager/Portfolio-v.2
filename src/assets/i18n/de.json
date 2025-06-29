@@ -19,7 +19,7 @@
         }
     },
     "my-skills": {
-        "headline": "Kernkompetenzen",
+        "headline": "Fähigkeiten",
         "description": "Ich habe in meinen Projekten bereits eine Vielzahl von Frontend-Technologien eingesetzt, etwa beim Erstellen von statischen und dynamischen Websites, bei der Umsetzung responsiver Layouts, in der Entwicklung von benutzerfreundlichen und interaktiven Benutzeroberflächen sowie bei der Darstellung von Daten über ansprechende Visualisierungstools.",
         "popUp": {
             "headline": "Die gesuchte Fähigkeit nicht dabei?",
@@ -29,6 +29,10 @@
     "portfolio": {
         "headline": "Meine Arbeit",
         "description": "Sehen Sie sich hier eine Auswahl meiner Projekte an und überzeugen Sie sich von meinen Fähigkeiten.",
+        "arrow": {
+            "left": "Vorheriges Projekt",
+            "right": "Nächtes Projekt"
+        },
         "projects": {
             "dabubble": {
                 "description": "Als Klon von Slack revolutioniert diese App die Kommunikation und Zusammenarbeit im Team – dank einer intuitiven Benutzeroberfläche, Nachrichten in Echtzeit und einer durchdachten Organisation der Kanäle.",
