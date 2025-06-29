@@ -5,7 +5,7 @@
     },
     "about-me": {
         "headline": "About me",
-        "description": "Hello! I'm a frontend developer from the Stendal region, fascinated by the possibilities of the web. My passion is developing appealing and intuitive websites that users love. I see challenges as an opportunity to learn and expand my skills. For me, code is a tool for creative problem-solving to turn ideas into functional and appealing websites.",
+        "description": "Hello! I'm a frontend developer from the Stendal, fascinated by the possibilities of the web. My passion is developing appealing and intuitive websites that users love. I see challenges as an opportunity to learn and expand my skills. For me, code is a tool for creative problem-solving to turn ideas into functional and appealing websites.",
         "tagline": "Let's get to know each other and create something great together!",
         "button": "Let's talk",
         "popUp": {
@@ -13,7 +13,7 @@
             "1": "Team Player",
             "2": "Continuous Learning",
             "3": "Creative Thinking",
-            "4": "Based in Stendal",
+            "4": "Ambitious",
             "5": "Open to remote work",
             "6": "Quality-conscious"
         }

@@ -5,22 +5,22 @@
     },
     "about-me": {
         "headline": "Über mich",
-        "description": "Hallo! Ich bin Frontend-Entwickler aus der Region Stendal und fasziniert von den Möglichkeiten des Webs. Meine Leidenschaft ist die Entwicklung ansprechender und intuitiver Webseiten, die Nutzer begeistern. Herausforderungen sehe ich als Chance, zu lernen und meine Fähigkeiten zu erweitern. Für mich ist Code ein Werkzeug für kreative Problemlösung, um aus Ideen funktionale und ansprechende Webseiten zu schaffen.",
-        "tagline": "Lass uns kennenlernen und deine Vision gemeinsam verwirklichen.",
-        "button": "Lass uns reden",
+        "description": "Hallo! Ich bin Frontend-Entwickler aus Stendal und fasziniert von den Möglichkeiten des Webs. Meine Leidenschaft ist die Entwicklung ansprechender und intuitiver Webseiten, die Nutzer begeistern. Herausforderungen sehe ich als Chance zu lernen und meine Fähigkeiten zu erweitern. Für mich ist Code ein Werkzeug für kreative Problemlösung, um aus Ideen funktionale und ansprechende Webseiten zu schaffen.",
+        "tagline": "Lassen Sie uns Ihre Version gemeinsam verwirklichen.",
+        "button": "Melden Sie sich",
         "popUp": {
             "headline": "Mehr Über Mich",
             "1": "Teamplayer",
             "2": "Kontinuierliches Lernen",
             "3": "Kreatives Denken",
-            "4": "Lebe in Stendal",
+            "4": "Ergeizig",
             "5": "Offen für Remote-Arbeit",
             "6": "Qualitätsbewusstsein"
         }
     },
     "my-skills": {
-        "headline": "Kernkompetenz",
-        "description": "Ich habe in meinen Projekten bereits eine Vielzahl von Frontend-Technologien eingesetzt. Diese Fähigkeiten kamen in unterschiedlichen Bereichen zum Einsatz – etwa beim Erstellen von statischen und dynamischen Websites, bei der Umsetzung responsiver Layouts, in der Entwicklung von benutzerfreundlichen und interaktiven Benutzeroberflächen sowie bei der Darstellung von Daten über ansprechende Visualisierungstools.",
+        "headline": "Kernkompetenzen",
+        "description": "Ich habe in meinen Projekten bereits eine Vielzahl von Frontend-Technologien eingesetzt, etwa beim Erstellen von statischen und dynamischen Websites, bei der Umsetzung responsiver Layouts, in der Entwicklung von benutzerfreundlichen und interaktiven Benutzeroberflächen sowie bei der Darstellung von Daten über ansprechende Visualisierungstools.",
         "popUp": {
             "headline": "Die gesuchte Fähigkeit nicht dabei?",
             "description": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein vorhandenes Wissen auszubauen. Außerdem habe ich ein besonderes Interesse daran, mehr in folgenden Bereichen zu lernen:"
@@ -36,7 +36,7 @@
             },
             "join": {
                 "description": "Task-Manager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
-                "popup": "Im „Join“-Projekt habe ich eine vielseitige Rolle eingenommen. Mein primärer Fokus war die Entwicklung der Kontaktverwaltung, wo ich die Funktionen zum Erstellen und Bearbeiten von Benutzern implementiert habe. Außerdem habe ich die „Summary“-Ansicht gestaltet, die als zentrale Übersichtsseite dient. Abseits davon war ich tief in die Frontend-Entwicklung involviert und habe das Team bei der Umsetzung der Designs mit HTML und CSS unterstützt. Auch bei den Kernstücken der Anwendung, dem Drag-and-Drop-Board und dem „Add Task“-Dialog, konnte ich wichtige Beiträge leisten und bei der Finalisierung helfen."
+                "popup": "Im „Join“-Projekt habe ich eine vielseitige Rolle eingenommen. Mein primärer Fokus war die Entwicklung der Kontaktverwaltung, bei der ich die Funktionen zum Erstellen und Bearbeiten von Benutzern implementiert habe. Außerdem habe ich die „Summary“-Ansicht gestaltet, die als zentrale Übersichtsseite dient. Des Weiteren war ich tief in die Frontend-Entwicklung involviert und habe das Team bei der Umsetzung der Designs mit HTML und CSS unterstützt. Auch bei den Kernstücken der Anwendung, dem Drag-and-Drop-Board und dem „Add Task“-Dialog, konnte ich wichtige Beiträge leisten und bei der Finalisierung helfen."
             },
             "elPolloLoco": {
                 "description": "Ein einfaches Jump-and-Run-Spiel basierend auf objektorientiertem Programmieren. Hilf Pedro, Münzen und Giftflaschen zu finden, um gegen das Killerhuhn zu kämpfen.",
@@ -49,11 +49,11 @@
         "feedback": {
             "johannes": "Stephan hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und seine proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
             "andrei": "Die Zusammenarbeit mit Stephan bei einem intensiven Projekt an der Developer Akademie war ein echter Glücksfall. Mit seiner ruhigen und konzentrierten Art hat er unser Team zum Erfolg geführt. Die Arbeit mit ihm ist eine Freude und ich würde jederzeit gerne wieder mit ihm in einem Team sein.",
-            "jens": "Die Zusammenarbeit mit Stephan war ein echter Gewinn. Seine positive und zupackende Art hat nicht nur das Projekt beschleunigt, sondern auch das ganze Team motiviert."
+            "jens": "Seine positive und zupackende Art hat nicht nur das Projekt beschleunigt, sondern auch das ganze Team motiviert."
         }
     },
     "contact": {
-        "headline": "Lass uns gemeinsam etwas Cooles bauen!",
+        "headline": "Lassen Sie uns gemeinsam etwas Cooles bauen!",
         "subheadline": "Sie haben ein Problem zu lösen?",
         "description": "Ich bin ein Web-Entwickler, der mit Leidenschaft für sauberen Code und nutzerzentriertes Design robuste, intuitive Anwendungen schafft. Wenn Sie einen sorgfältigen und proaktiven Teamplayer für Ihre Projekte suchen, freue ich mich darauf, von Ihnen zu hören.",
         "form": {
@@ -80,7 +80,8 @@
                 },
                 "errorMessage": "Bitte akzeptieren Sie die Datenschutzerklärung."
             },
-            "button": "Nachricht senden"
+            "button": "Nachricht senden",
+            "emailSend": "Gesendet"
         }
     },
     "imprint": {
