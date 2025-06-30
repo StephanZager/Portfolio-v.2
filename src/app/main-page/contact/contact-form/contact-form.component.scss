@@ -136,6 +136,10 @@ button:disabled {
     transform: translateX(100%);
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 
+     @media (max-width: $breakpoint-sm) {
+        bottom: 127px;
+    }
+
 }
 
 .send-mail.is-visible {
