@@ -19,7 +19,7 @@
                         <img (mouseover)="openMenu()" (mouseout)="closeMenu()" class="up-douwn"
                             src="./../../../assets/img/icons/speak- smiley.svg" alt="">
 
-                        <app-pop-up-menu class="menu" [class.is-visible]="isMenuVisible">
+                        <app-pop-up-menu class="menu" [class.is-visible]="isMenuVisible" (menuClosed)="isMenuVisible = false">
                         </app-pop-up-menu>
                     </div>
 

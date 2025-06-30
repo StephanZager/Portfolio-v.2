@@ -11,7 +11,7 @@
         <div class="project-info">
             <div class="headline-section">
                 <h6>{{projects[curentProject].name}}</h6>
-                <img (mouseout)="closePopUp()" (mouseover)="openPopUp()" class="up-douwn"
+                <img (mouseout)="closePopUp()" (mouseover)="openPopUp()" (menuClosed)="isPopUpVisible = false" class="up-douwn"
                     [src]="projects[curentProject].img.icon" alt="">
                 <app-my-work-on-it-pop-up class="pop-up" [class.is-visible]="isPopUpVisible"
                     [text]="projects[curentProject].popupText | translate">

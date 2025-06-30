@@ -1,5 +1,5 @@
 <div class="continual-learning-container">
     <img class="rotating circle" src="./../../../../assets/img/circle.svg" alt="">
     <img (mouseout)="closePopUp()" (mouseover)="openPopUp()" class="icon" src="./../../../../assets/img/icons/lerning.svg" alt="">
-    <app-pop-up-learning [class.is-visible]="isPopUpVisible" class="pop-up"></app-pop-up-learning>
+    <app-pop-up-learning [class.is-visible]="isPopUpVisible" (menuClosed)="isPopUpVisible = false" class="pop-up"></app-pop-up-learning>
 </div>

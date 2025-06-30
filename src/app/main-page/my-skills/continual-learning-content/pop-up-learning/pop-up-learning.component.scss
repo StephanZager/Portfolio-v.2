@@ -11,9 +11,13 @@
     border-radius: 4px;
 
     h6 {
+        width: 272px;
         color: $white;
         text-align: center;
         margin-bottom: 8px;
+        @media (max-width: $breakpoint-xs) {
+            width: 100%;
+        }
     }
 
     span {
@@ -37,5 +41,20 @@
         gap: 40px;
         margin-top: 8px;
         @include flex($justify: normal, $align: normal, $direction: row);
+    }
+}
+
+.close {
+    display: none;
+    right: 12px;
+    top: 16px;
+    position: absolute;
+
+    &:active {
+        filter: brightness(0) saturate(100%) invert(54%) sepia(85%) saturate(749%) hue-rotate(-16deg) brightness(104%) contrast(101%);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        display: flex;
     }
 }

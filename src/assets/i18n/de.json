@@ -6,7 +6,7 @@
     "about-me": {
         "headline": "Über mich",
         "description": "Hallo! Ich bin Frontend-Entwickler aus Stendal und fasziniert von den Möglichkeiten des Webs. Meine Leidenschaft ist die Entwicklung ansprechender und intuitiver Webseiten, die Nutzer begeistern. Herausforderungen sehe ich als Chance zu lernen und meine Fähigkeiten zu erweitern. Für mich ist Code ein Werkzeug für kreative Problemlösung, um aus Ideen funktionale und ansprechende Webseiten zu schaffen.",
-        "tagline": "Lassen Sie uns Ihre Version gemeinsam verwirklichen.",
+        "tagline": "Lassen Sie uns Ihre Vision gemeinsam verwirklichen.",
         "button": "Melden Sie sich",
         "popUp": {
             "headline": "Mehr Über Mich",
@@ -28,10 +28,10 @@
     },
     "portfolio": {
         "headline": "Meine Arbeit",
-        "description": "Sehen Sie sich hier eine Auswahl meiner Projekte an und überzeugen Sie sich von meinen Fähigkeiten.",
+        "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten und überzeugen Sie sich selbst von meinen Fähigkeiten.",
         "arrow": {
             "left": "Vorheriges Projekt",
-            "right": "Nächtes Projekt"
+            "right": "Nächstes Projekt"
         },
         "projects": {
             "dabubble": {

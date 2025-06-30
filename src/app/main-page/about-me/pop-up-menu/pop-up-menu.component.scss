@@ -1,7 +1,7 @@
 @import './../../../styles/mixins';
 @import './../../../styles/variables';
 
-.menu-container{
+.menu-container {
     @include flex($justify: normal, $align: normal, $direction: column);
     padding: 32px;
     width: 272px;
@@ -12,22 +12,39 @@
     position: relative;
     z-index: 9999 !important;
 
-    h6{
+    h6 {
         text-align: center;
         color: $white;
     }
 }
 
-.list{
+.list {
     @include flex($justify: space-between, $align: normal, $direction: column);
     margin-top: 16px;
     flex: 1;
-    p{
+
+    p {
         color: $white;
         font-size: 16px;
     }
-    div{
+
+    div {
         @include flex($justify: normal, $align: normal);
         gap: 8px;
+    }
+}
+
+.close {
+    display: none;
+    right: 12px;
+    top: 16px;
+    position: absolute;
+
+    &:active {
+        filter: brightness(0) saturate(100%) invert(54%) sepia(85%) saturate(749%) hue-rotate(-16deg) brightness(104%) contrast(101%);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        display: flex;
     }
 }

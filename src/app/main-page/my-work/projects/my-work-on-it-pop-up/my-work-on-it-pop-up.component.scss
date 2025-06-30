@@ -17,6 +17,21 @@
         width: 100%;
     }
     @media(max-width: $breakpoint-sm) {
-        padding: 16px;
+        padding: 24px;
+    }
+}
+
+.close {
+    display: none;
+    right: 8px;
+    top: 8px;
+    position: absolute;
+
+    &:active {
+        filter: brightness(0) saturate(100%) invert(54%) sepia(85%) saturate(749%) hue-rotate(-16deg) brightness(104%) contrast(101%);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        display: flex;
     }
 }

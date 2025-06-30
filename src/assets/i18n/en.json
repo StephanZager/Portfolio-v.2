@@ -1,11 +1,11 @@
 {
     "lading-page": {
-        "headline": "Hello i am",
+        "headline": "Hello, I'm",
         "button": "Contact me"
     },
     "about-me": {
         "headline": "About me",
-        "description": "Hello! I'm a frontend developer from the Stendal, fascinated by the possibilities of the web. My passion is developing appealing and intuitive websites that users love. I see challenges as an opportunity to learn and expand my skills. For me, code is a tool for creative problem-solving to turn ideas into functional and appealing websites.",
+        "description": "Hello! I'm a frontend developer from Stendal, fascinated by the possibilities of the web. My passion is developing appealing and intuitive websites that users love. I see challenges as an opportunity to learn and expand my skills. For me, code is a tool for creative problem-solving to turn ideas into functional and appealing websites.",
         "tagline": "Let's get to know each other and create something great together!",
         "button": "Let's talk",
         "popUp": {
@@ -49,9 +49,9 @@
         }
     },
     "referenzen": {
-        "headline": "Waht my colleagues say about me",
+        "headline": "What my colleagues say about me",
         "feedback": {
-            "johannes": "Stephan has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+            "johannes": "Stephan has proven to be a conscientious group partner. His technical skills and proactive approach were crucial to the success of our project.",
             "andrei": "Teaming up with Stephan on an intensive project at the Developer Akademie was a true blessing. His calm and focused approach guided our team to success. He is a pleasure to work with, and I would happily join his team again in a heartbeat.",
             "jens": "Collaborating with Stephan was a huge win. His positive, can-do attitude didn't just speed up the project; it also energized the whole team."
         }

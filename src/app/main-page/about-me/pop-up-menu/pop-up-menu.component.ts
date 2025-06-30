@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule} from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-pop-up-menu',
@@ -11,4 +12,10 @@ import { TranslateModule} from '@ngx-translate/core';
 })
 export class PopUpMenuComponent {
 
+  @Input() isMenuVisible: boolean = false;
+  @Output() menuClosed = new EventEmitter<void>();
+
+  closeMenu() {
+    this.menuClosed.emit();
+  }
 }
