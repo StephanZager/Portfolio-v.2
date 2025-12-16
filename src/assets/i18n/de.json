@@ -5,7 +5,7 @@
     },
     "about-me": {
         "headline": "Über mich",
-        "description": "Hallo! Ich bin Frontend-Entwickler aus Stendal und fasziniert von den Möglichkeiten des Webs. Meine Leidenschaft ist die Entwicklung ansprechender und intuitiver Webseiten, die Nutzer begeistern. Herausforderungen sehe ich als Chance zu lernen und meine Fähigkeiten zu erweitern. Für mich ist Code ein Werkzeug für kreative Problemlösung, um aus Ideen funktionale und ansprechende Webseiten zu schaffen.",
+        "description": "Hallo! Ich bin Fullstack-Entwickler aus Stendal und fasziniert von den Möglichkeiten des Webs. Meine Leidenschaft ist die Entwicklung ansprechender und intuitiver Webseiten, die Nutzer begeistern. Herausforderungen sehe ich als Chance zu lernen und meine Fähigkeiten zu erweitern. Für mich ist Code ein Werkzeug für kreative Problemlösung, um aus Ideen funktionale und ansprechende Webseiten zu schaffen.",
         "tagline": "Lassen Sie uns Ihre Vision gemeinsam verwirklichen.",
         "button": "Melden Sie sich",
         "popUp": {
@@ -20,7 +20,7 @@
     },
     "my-skills": {
         "headline": "Fähigkeiten",
-        "description": "Ich habe in meinen Projekten bereits eine Vielzahl von Frontend-Technologien eingesetzt, etwa beim Erstellen von statischen und dynamischen Websites, bei der Umsetzung responsiver Layouts, in der Entwicklung von benutzerfreundlichen und interaktiven Benutzeroberflächen sowie bei der Darstellung von Daten über ansprechende Visualisierungstools.",
+        "description": "Vom Pixel bis zur Datenbank: In meinen Projekten verbinde ich Frontend-Ästhetik mit Backend-Performance. Ich entwickle responsive Benutzeroberflächen und interaktive Visualisierungen, die durch eine solide Server-Logik und effiziente API-Strukturen angetrieben werden. So entstehen vollständige, dynamische Webanwendungen aus einer Hand.",
         "popUp": {
             "headline": "Die gesuchte Fähigkeit nicht dabei?",
             "description": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein vorhandenes Wissen auszubauen. Außerdem habe ich ein besonderes Interesse daran, mehr in folgenden Bereichen zu lernen:"
@@ -37,6 +37,10 @@
             "dabubble": {
                 "description": "Als Klon von Slack revolutioniert diese App die Kommunikation und Zusammenarbeit im Team – dank einer intuitiven Benutzeroberfläche, Nachrichten in Echtzeit und einer durchdachten Organisation der Kanäle.",
                 "popup": "Meine Hauptaufgabe im „dabubble“-Projekt war die Entwicklung eines sicheren und robusten Benutzer-Managements. Dafür habe ich Firebase Authentication integriert, um die Registrierung, die Anmeldung und die Funktion zum Zurücksetzen des Passworts zu realisieren. Im Frontend-Bereich war ich für die Umsetzung der Designs mit modernem HTML und CSS verantwortlich. Als engagierter Teamplayer habe ich auch regelmäßig meine Kollegen bei der Lösung von Problemen unterstützt, um den gemeinsamen Fortschritt voranzutreiben."
+            },
+            "coderr": {
+                "description": "Eine Freelancer-Plattform: Erstelle Business- oder Customer-Profile, veröffentliche Angebote und buche Dienstleistungen.",
+                "popup": "Ich habe die gesamte Server-Architektur mit Python und Django entwickelt. Der Fokus lag auf einer RESTful API mit dem Django REST Framework (DRF), wobei ich ViewSets und Routers für sauberen, wartbaren Code nutzte. Das Fundament bildet ein komplexes relationales Datenbank-Design (SQL) für User-Profile, Angebote und Reviews."
             },
             "join": {
                 "description": "Task-Manager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",

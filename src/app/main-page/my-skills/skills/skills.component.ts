@@ -21,7 +21,14 @@ export class SkillsComponent {
     { name: 'Git', img: './../../../../assets/img/icons/git-hub.svg' },
     { name: 'API', img: './../../../../assets/img/icons/api.svg' },
     { name: 'Scrum', img: './../../../../assets/img/icons/scrum.svg' },
-    { name: 'Material', img: './../../../../assets/img/icons/material.svg' }
+    //{ name: 'Material', img: './../../../../assets/img/icons/material.svg' },
+    { name: 'Python', img: './../../../../assets/img/icons/Python.svg' },
+    { name: 'Django', img: './../../../../assets/img/icons/Django.svg' },
+    //{ name: 'SQL', img: './../../../../assets/img/icons/SQL.svg' },
+    { name: 'PostgreSQL', img: './../../../../assets/img/icons/PostgreSQL.svg' },
+    { name: 'Docker', img: './../../../../assets/img/icons/Docker.svg' },
+    { name: 'Linuxs', img: './../../../../assets/img/icons/Linux.svg' },
+    { name: 'Cloud', img: './../../../../assets/img/icons/Cloud.svg' }
   ];
 
 }

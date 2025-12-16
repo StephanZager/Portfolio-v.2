@@ -31,6 +31,19 @@ export class ProjectsComponent {
       linkLive: 'https://www.dabubble.stephan-zager.de/',
     },
     {
+      name: 'Coderr',
+      technology: 'Python, Django, DRF,PostgreSQL',
+      description: 'portfolio.projects.coderr.description',
+      popupText: 'portfolio.projects.coderr.popup',
+      img: {
+        picture: './../../../../assets/img/projects/coderr.png',
+        bg: '#213830',
+        icon: './../../../../assets/img/icons/coderr.svg',
+      },
+      linkGithub: 'https://github.com/StephanZager/Coderr_Backend',
+      linkLive: 'https://www.coderr.stephan-zager.de//',
+    },
+    {
       name: 'Join',
       technology: 'HTML,CSS,Firebase,JavaScript',
       description: 'portfolio.projects.join.description',
