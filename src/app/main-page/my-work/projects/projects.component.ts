@@ -36,7 +36,7 @@ export class ProjectsComponent {
       description: 'portfolio.projects.coderr.description',
       popupText: 'portfolio.projects.coderr.popup',
       img: {
-        picture: './../../../../assets/img/projects/coderr.png',
+        picture: './../../../../assets/img/projects/coderr.jpg',
         bg: '#213830',
         icon: './../../../../assets/img/icons/coderr.svg',
       },
