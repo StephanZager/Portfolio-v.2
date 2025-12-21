@@ -27,7 +27,7 @@ export class SkillsComponent {
     //{ name: 'SQL', img: './../../../../assets/img/icons/SQL.svg' },
     { name: 'PostgreSQL', img: './../../../../assets/img/icons/PostgreSQL.svg' },
     { name: 'Docker', img: './../../../../assets/img/icons/Docker.svg' },
-    { name: 'Linuxs', img: './../../../../assets/img/icons/Linux.svg' },
+    { name: 'Linux', img: './../../../../assets/img/icons/Linux.svg' },
     { name: 'Cloud', img: './../../../../assets/img/icons/Cloud.svg' }
   ];
 
